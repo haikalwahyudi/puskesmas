@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 13, 2022 at 02:17 PM
+-- Generation Time: Jun 16, 2022 at 01:18 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.4.20
 
@@ -28,11 +28,13 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `dokter` (
-  `Kode_dokter` int(8) NOT NULL,
-  `Nama_dokter` varchar(100) DEFAULT NULL,
-  `Spesialis` varchar(100) DEFAULT NULL,
-  `Alamat_dokter` varchar(100) DEFAULT NULL,
-  `Gambar_dokter` varchar(100) DEFAULT NULL
+  `kd_dokter` int(11) NOT NULL,
+  `nm_dokter` varchar(50) NOT NULL,
+  `spesialis` varchar(40) NOT NULL,
+  `jk` varchar(20) NOT NULL,
+  `no_hp` varchar(16) NOT NULL,
+  `poto` varchar(255) NOT NULL,
+  `alamat` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -77,12 +79,12 @@ CREATE TABLE `pendaftaran` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `poli/ruangan`
+-- Table structure for table `poli`
 --
 
-CREATE TABLE `poli/ruangan` (
-  `No_poli` int(8) NOT NULL,
-  `Nama_poli/ruangan` int(100) NOT NULL
+CREATE TABLE `poli` (
+  `kd_poli` int(11) NOT NULL,
+  `nm_poli` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -106,8 +108,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`Kode_user`, `Nama_user`, `email`, `Jenis_kelamin`, `No_hp`, `password`, `level`) VALUES
-(2, 'Haikal Wahyudi', 'admin@gmail.com', 'Laki-Laki', '083123765123', 'admin', 'admin'),
-(5, 'kjhjkkj', 'ggg@gmail.com', 'Laki-Laki', '083123435567', '1234', 'pasien');
+(5, 'Haikal Wahyudi', 'admin@gmail.com', 'Laki-Laki', '083123435567', '1234', 'admin'),
+(14, 'aaaa', 'aaaaa@gmail.com', 'Perempuan', '1111', '11', 'Admin');
 
 --
 -- Indexes for dumped tables
@@ -117,7 +119,7 @@ INSERT INTO `user` (`Kode_user`, `Nama_user`, `email`, `Jenis_kelamin`, `No_hp`,
 -- Indexes for table `dokter`
 --
 ALTER TABLE `dokter`
-  ADD PRIMARY KEY (`Kode_dokter`);
+  ADD PRIMARY KEY (`kd_dokter`);
 
 --
 -- Indexes for table `jadwal_praktek`
@@ -138,10 +140,10 @@ ALTER TABLE `pendaftaran`
   ADD PRIMARY KEY (`No_pendaftaran`);
 
 --
--- Indexes for table `poli/ruangan`
+-- Indexes for table `poli`
 --
-ALTER TABLE `poli/ruangan`
-  ADD PRIMARY KEY (`No_poli`);
+ALTER TABLE `poli`
+  ADD PRIMARY KEY (`kd_poli`);
 
 --
 -- Indexes for table `user`
@@ -154,10 +156,22 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `dokter`
+--
+ALTER TABLE `dokter`
+  MODIFY `kd_dokter` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `poli`
+--
+ALTER TABLE `poli`
+  MODIFY `kd_poli` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `Kode_user` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `Kode_user` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
