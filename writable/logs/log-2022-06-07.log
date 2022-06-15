@@ -1,0 +1,10 @@
+CRITICAL - 2022-06-07 09:16:48 --> Invalid file: daftar.php
+#0 C:\xampp\htdocs\puskesmas\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('daftar.php')
+#1 C:\xampp\htdocs\puskesmas\system\Common.php(1089): CodeIgniter\View\View->render('daftar', Array, true)
+#2 C:\xampp\htdocs\puskesmas\app\Controllers\Puskesmas.php(59): view('daftar')
+#3 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Puskesmas->daftar()
+#4 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#5 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}

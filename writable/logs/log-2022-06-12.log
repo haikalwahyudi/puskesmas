@@ -1,0 +1,42 @@
+CRITICAL - 2022-06-12 05:03:05 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\puskesmas\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\puskesmas\spark(45): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2022-06-12 01:35:58 --> Undefined index: leve
+#0 C:\xampp\htdocs\puskesmas\app\Controllers\login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Login->cekLogin()
+#2 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2022-06-12 03:04:39 --> Column 'Nama_user' cannot be null
+CRITICAL - 2022-06-12 03:04:39 --> Column 'Nama_user' cannot be null
+#0 C:\xampp\htdocs\puskesmas\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\puskesmas\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\puskesmas\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\puskesmas\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\puskesmas\app\Models\M_pengguna.php(14): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\puskesmas\app\Controllers\Puskesmas.php(86): App\Models\M_pengguna->simpan(Array)
+#6 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Puskesmas->tpengguna_aksi()
+#7 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#8 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2022-06-12 03:05:30 --> Column 'No_hp' cannot be null
+CRITICAL - 2022-06-12 03:05:30 --> Column 'No_hp' cannot be null
+#0 C:\xampp\htdocs\puskesmas\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\puskesmas\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\puskesmas\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\puskesmas\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\puskesmas\app\Models\M_pengguna.php(14): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\puskesmas\app\Controllers\Puskesmas.php(86): App\Models\M_pengguna->simpan(Array)
+#6 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Puskesmas->tpengguna_aksi()
+#7 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#8 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}

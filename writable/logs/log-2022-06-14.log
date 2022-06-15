@@ -1,0 +1,23 @@
+CRITICAL - 2022-06-14 09:03:21 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\puskesmas\system\View\View.php(210): include()
+#1 C:\xampp\htdocs\puskesmas\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\puskesmas\system\Common.php(1089): CodeIgniter\View\View->render('admin/v_upenggu...', Array, true)
+#3 C:\xampp\htdocs\puskesmas\app\Controllers\Puskesmas.php(86): view('admin/v_upenggu...', Array)
+#4 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Puskesmas->upengguna('5')
+#5 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#6 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-06-14 09:11:20 --> Undefined index: jk
+#0 C:\xampp\htdocs\puskesmas\app\Views\admin\v_upengguna.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 39, Array)
+#1 C:\xampp\htdocs\puskesmas\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\puskesmas\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\puskesmas\system\Common.php(1089): CodeIgniter\View\View->render('admin/v_upenggu...', Array, true)
+#4 C:\xampp\htdocs\puskesmas\app\Controllers\Puskesmas.php(86): view('admin/v_upenggu...', Array)
+#5 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Puskesmas->upengguna('5')
+#6 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#7 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}

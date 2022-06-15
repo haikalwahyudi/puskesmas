@@ -1,0 +1,61 @@
+CRITICAL - 2022-06-08 07:59:03 --> syntax error, unexpected '}'
+#0 C:\xampp\htdocs\puskesmas\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('puskesmas/dafta...')
+#1 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('puskesmas/dafta...')
+#2 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-06-08 09:05:44 --> Call to undefined method App\Models\M_login::cekLogin
+#0 C:\xampp\htdocs\puskesmas\app\Controllers\login.php(22): CodeIgniter\Model->__call('cekLogin', Array)
+#1 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Login->cekLogin()
+#2 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-06-08 09:06:01 --> Call to undefined method App\Models\M_login::cekLogin
+#0 C:\xampp\htdocs\puskesmas\app\Controllers\login.php(22): CodeIgniter\Model->__call('cekLogin', Array)
+#1 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Login->cekLogin()
+#2 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-06-08 09:06:18 --> Call to undefined method App\Models\M_login::cekLogin
+#0 C:\xampp\htdocs\puskesmas\app\Controllers\login.php(22): CodeIgniter\Model->__call('cekLogin', Array)
+#1 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Login->cekLogin()
+#2 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-06-08 09:25:35 --> Undefined index: nama_user
+#0 C:\xampp\htdocs\puskesmas\app\Controllers\login.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Login->cekLogin()
+#2 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-06-08 09:39:29 --> Uninitialized string offset: 0
+#0 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(790): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Uninitialized s...', 'C:\\xampp\\htdocs...', 790, Array)
+#1 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->startController()
+#2 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-06-08 09:39:35 --> Uninitialized string offset: 0
+#0 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(790): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Uninitialized s...', 'C:\\xampp\\htdocs...', 790, Array)
+#1 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->startController()
+#2 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-06-08 09:39:47 --> Uninitialized string offset: 0
+#0 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(790): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Uninitialized s...', 'C:\\xampp\\htdocs...', 790, Array)
+#1 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->startController()
+#2 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
