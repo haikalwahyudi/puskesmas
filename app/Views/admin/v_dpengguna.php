@@ -21,6 +21,12 @@
                 <h5><i class="icon fas fa-check"></i> Pemberitahuan!</h5>
                 <?= session()->getFlashdata('hapus'); ?>
             </div>
+        <?php } elseif (session()->getFlashdata('ubah')) { ?>
+            <div class="alert alert-warning alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <h5><i class="icon fas fa-check"></i> Pemberitahuan!</h5>
+                <?= session()->getFlashdata('ubah'); ?>
+            </div>
         <?php } ?>
         <div class="row">
             <div class="col-md-12">

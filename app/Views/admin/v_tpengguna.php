@@ -64,7 +64,7 @@
                                 <select name="level" class="form-control" required>
                                     <option value="">-Pilih-</option>
                                     <option value="Admin">Admin</option>
-                                    <option value="pasien">pasien</option>
+                                    <option value="Pasien">Pasien</option>
                                 </select>
                             </div>
 

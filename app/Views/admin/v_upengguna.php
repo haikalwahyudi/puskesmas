@@ -23,11 +23,12 @@
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form action="<?= base_url(); ?>/puskesmas/tpengguna_aksi" method="POST">
+                    <form action="<?= base_url(); ?>/puskesmas/upenggunaAksi" method="POST">
                         <div class="card-body">
                             <div class="form-group">
                                 <label>Nama Pengguna</label>
                                 <input type="text" name="nama_pengguna" class="form-control" value="<?= $dp['Nama_user']; ?>" required>
+                                <input type="hidden" name="kd" value="<?= $dp['Kode_user']; ?>">
                             </div>
                             <div class="form-group">
                                 <label>Email</label>
@@ -60,8 +61,12 @@
                                 <label for="Level">Level</label>
                                 <select name="level" class="form-control" required>
                                     <option value="">-Pilih-</option>
-                                    <option value="Admin">Admin</option>
-                                    <option value="pasien">pasien</option>
+                                    <option value="Admin" <?php if ($dp['level'] == "Admin") {
+                                                                echo 'selected';
+                                                            } ?>>Admin</option>
+                                    <option value="Pasien" <?php if ($dp['level'] == "Pasien") {
+                                                                echo 'selected';
+                                                            } ?>>pasien</option>
                                 </select>
                             </div>
 

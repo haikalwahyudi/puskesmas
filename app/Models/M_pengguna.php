@@ -26,4 +26,10 @@ class M_pengguna extends Model
         $simpan = $this->db->table($this->table);
         return $simpan->delete(['Kode_user' => $id]);
     }
+    public function ubah($data, $id)
+    {
+        $ubah = $this->db->table($this->table);
+        $ubah->where(['Kode_user' => $id]);
+        return $ubah->update($data);
+    }
 }

@@ -85,6 +85,21 @@ class Puskesmas extends BaseController
 
         return view('admin/v_upengguna', $data);
     }
+    public function upenggunaAksi()
+    {
+        $kd = $this->request->getVar('kd');
+        // dd($kd);
+        $this->M_pengguna->ubah([
+            'Nama_user'     => $this->request->getVar('nama_pengguna'),
+            'email'         => $this->request->getVar('email'),
+            'Jenis_kelamin' => $this->request->getVar('jk'),
+            'No_hp'         => $this->request->getVar('nohp'),
+            'password'      => $this->request->getVar('password'),
+            'level'         => $this->request->getVar('level')
+        ], $kd);
+        session()->setFlashdata('ubah', 'Data berhasil diubah');
+        return redirect()->to('/puskesmas/dpengguna');
+    }
     public function tpengguna_aksi()
     {
         $this->M_pengguna->simpan([
