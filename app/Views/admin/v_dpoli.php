@@ -34,22 +34,20 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php
+                                    $no=1;
+
+                                    foreach ($data as $d) {
+                                ?>
                                 <tr>
-                                    <td>123</td>
-                                    <td>Haikal</td>
+                                    <td><?= $no++; ?></td>
+                                    <td><?= $d->nm_poli; ?></td>
                                     <td>
-                                        <button class="btn btn-danger btn-sm">Hapus</button>
+                                        <a href="<?= base_url(); ?>/puskesmas/hpoliaksi" class="btn btn-danger btn-sm">Hapus</a>
                                         <a href="<?= base_url(); ?>/puskesmas/upoli" class="btn btn-warning btn-sm">Ubah</a>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>123</td>
-                                    <td>Haikal</td>
-                                    <td>
-                                        <button class="btn btn-danger btn-sm">Hapus</button>
-                                        <button class="btn btn-warning btn-sm">Ubah</button>
-                                    </td>
-                                </tr>
+                            <?php } ?>
                             </tbody>
                         </table>
                     </div>

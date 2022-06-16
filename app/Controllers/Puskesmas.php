@@ -3,15 +3,19 @@
 namespace App\Controllers;
 
 use App\Models\M_pengguna;
+use App\Models\M_poli;
 
 
 class Puskesmas extends BaseController
 {
     protected $M_pengguna;
+    protected $M_poli;
 
     public function __construct()
     {
         $this->M_pengguna = new M_pengguna();
+        $this->M_poli = new M_poli();
+
     }
 
     public function index()
@@ -55,11 +59,22 @@ class Puskesmas extends BaseController
     // Poli
     public function dpoli()
     {
-        return view('admin/v_dpoli');
+        $data = [
+            'data'  => $this->M_poli->ambilData()
+        ];
+        return view('admin/v_dpoli',$data);
     }
     public function tpoli()
     {
         return view('admin/v_tpoli');
+    }
+    public function tpoliAksi()
+    {
+        $this->M_poli->simpan([
+            'nm_poli'   => $this->request->getVar('nm_poli'),
+        ]);
+        session()->setFlashdata('simpan','Data poli berhasil disimpan');
+        return redirect()->to('/puskesmas/tpoli');
     }
     public function upoli()
     {
