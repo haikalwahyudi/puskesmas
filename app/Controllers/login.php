@@ -22,7 +22,7 @@ class Login extends BaseController
         // dd($cek);
 
         if ($cek != null) {
-            if ($cek['level'] == 'admin') {
+            if ($cek['level'] == 'Admin') {
                 $data_ses = [
                     'nama'      => $cek['Nama_user'],
                     'level'     => $cek['level'],

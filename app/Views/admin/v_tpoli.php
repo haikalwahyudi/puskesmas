@@ -22,10 +22,10 @@
                 if(session()->getFlashdata('simpan')){
                 ?>
                 <div class="alert alert-success alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        <h5><i class="icon fas fa-check"></i> Pemberitahuan</h5>
-                        <?= session()->getFlashdata('simpan'); ?> <a href="<?= base_url(); ?>/puskesmas/dpoli">Lihat data</a>
-                    </div>
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <h5><i class="icon fas fa-check"></i> Pemberitahuan</h5>
+                    <?= session()->getFlashdata('simpan'); ?> <a href="<?= base_url(); ?>/puskesmas/dpoli">Lihat data</a>
+                </div>
                 <?php } ?>
                 <!-- And Alert -->
                 <div class="card card-success">

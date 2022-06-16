@@ -23,11 +23,12 @@
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form>
+                    <form action="<?= base_url(); ?>/puskesmas/upoliAksi">
                         <div class="card-body">
                             <div class="form-group">
                                 <label>Nama Poli</label>
-                                <input type="text" name="nama_poli" class="form-control">
+                                <input type="text" name="nm_poli" class="form-control" value="<?= $data['nm_poli']; ?>" required>
+                                <input type="hidden" name="kd_poli" value="<?= $data['kd_poli']; ?>">
                             </div>
                         </div>
                         <!-- /.card-body -->

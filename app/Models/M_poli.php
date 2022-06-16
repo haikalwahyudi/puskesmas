@@ -22,4 +22,10 @@ Class M_poli extends model
 		$simpan = $this->db->table($this->table);
 		return $simpan->insert($data);
 	}
+
+	public function hapus($id)
+	{
+		$hapus = $this->db->table($this->table);
+		return $hapus->delete(['kd_poli' => $id]);
+	}
 }

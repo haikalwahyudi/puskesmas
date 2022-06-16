@@ -76,9 +76,16 @@ class Puskesmas extends BaseController
         session()->setFlashdata('simpan','Data poli berhasil disimpan');
         return redirect()->to('/puskesmas/tpoli');
     }
-    public function upoli()
+    public function upoli($kd)
     {
-        return view('admin/v_upoli');
+        $data['data'] = $this->M_poli->ambilData($kd)->getRowArray();
+        return view('admin/v_upoli', $data);
+    }
+    public function hpoliAksi($id)
+    {
+        $this->M_poli->hapus($id);
+        session()->setFlashdata('hapus','Data poli berhasil dihapus');
+        return redirect()->to('/puskesmas/dpoli');
     }
     // And Poli
     // Pengguna
