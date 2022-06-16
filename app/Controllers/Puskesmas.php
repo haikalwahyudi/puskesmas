@@ -146,5 +146,5 @@ class Puskesmas extends BaseController
         session()->setFlashdata('Berhasil', 'Akun berhasil dibuat');
         return redirect()->to('/puskesmas/daftarAkun');
     }
-    // And Daftar Akun
+    // And Daftar Akun1
 }
