@@ -43,7 +43,7 @@
                                     <td><?= $no++; ?></td>
                                     <td><?= $d->nm_poli; ?></td>
                                     <td>
-                                        <a href="<?= base_url(); ?>/puskesmas/hpoliaksi" class="btn btn-danger btn-sm">Hapus</a>
+                                        <a href="<?= base_url(); ?>/puskesmas/hpoliaksi" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus data ini?')">Hapus</a>
                                         <a href="<?= base_url(); ?>/puskesmas/upoli" class="btn btn-warning btn-sm">Ubah</a>
                                     </td>
                                 </tr>
