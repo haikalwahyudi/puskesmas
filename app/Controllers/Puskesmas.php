@@ -15,7 +15,6 @@ class Puskesmas extends BaseController
     {
         $this->M_pengguna = new M_pengguna();
         $this->M_poli = new M_poli();
-
     }
 
     public function index()
@@ -62,7 +61,7 @@ class Puskesmas extends BaseController
         $data = [
             'data'  => $this->M_poli->ambilData()
         ];
-        return view('admin/v_dpoli',$data);
+        return view('admin/v_dpoli', $data);
     }
     public function tpoli()
     {
@@ -73,7 +72,7 @@ class Puskesmas extends BaseController
         $this->M_poli->simpan([
             'nm_poli'   => $this->request->getVar('nm_poli'),
         ]);
-        session()->setFlashdata('simpan','Data poli berhasil disimpan');
+        session()->setFlashdata('simpan', 'Data poli berhasil disimpan');
         return redirect()->to('/puskesmas/tpoli');
     }
     public function upoli($kd)
@@ -81,10 +80,23 @@ class Puskesmas extends BaseController
         $data['data'] = $this->M_poli->ambilData($kd)->getRowArray();
         return view('admin/v_upoli', $data);
     }
+
+    public function upoliAksi()
+    {
+        $kd = $this->request->getVar('kd_poli');
+
+        $this->M_poli->ubah([
+            'nm_poli'   => $this->request->getVar('nm_poli'),
+        ], $kd);
+
+        session()->setFlashdata('ubah', 'Data poli berhasil diubah');
+        return redirect()->to('/puskesmas/dpoli');
+    }
+
     public function hpoliAksi($id)
     {
         $this->M_poli->hapus($id);
-        session()->setFlashdata('hapus','Data poli berhasil dihapus');
+        session()->setFlashdata('hapus', 'Data poli berhasil dihapus');
         return redirect()->to('/puskesmas/dpoli');
     }
     // And Poli
