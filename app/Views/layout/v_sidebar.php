@@ -70,14 +70,14 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a href="<?= base_url(); ?>/puskesmas/druangan" class="nav-link">
                         <i class="nav-icon fas fa-user"></i>
                         <p>
                             Ruang
                         </p>
                     </a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a href="<?= base_url(); ?>/puskesmas/dpengguna" class="nav-link">
                         <i class="nav-icon fas fa-users"></i>

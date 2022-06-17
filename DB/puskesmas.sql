@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 16, 2022 at 01:18 AM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 7.4.20
+-- Waktu pembuatan: 17 Jun 2022 pada 07.00
+-- Versi server: 10.4.24-MariaDB
+-- Versi PHP: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,47 +24,58 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `dokter`
+-- Struktur dari tabel `dokter`
 --
 
 CREATE TABLE `dokter` (
   `kd_dokter` int(11) NOT NULL,
   `nm_dokter` varchar(50) NOT NULL,
-  `spesialis` varchar(40) NOT NULL,
+  `kd_poli` int(11) NOT NULL,
   `jk` varchar(20) NOT NULL,
   `no_hp` varchar(16) NOT NULL,
   `poto` varchar(255) NOT NULL,
+  `hari_praktik` varchar(20) NOT NULL,
+  `id` int(11) NOT NULL,
+  `alamat` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `dokter`
+--
+
+INSERT INTO `dokter` (`kd_dokter`, `nm_dokter`, `kd_poli`, `jk`, `no_hp`, `poto`, `hari_praktik`, `id`, `alamat`) VALUES
+(1, 'dsfg', 1, 'Laki Laki', '768768678', 'dgdgdgdf.jpg', '', 0, 'sdfsdfsdfdsf');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `jadwal_praktek`
+--
+
+CREATE TABLE `jadwal_praktek` (
+  `id` int(11) NOT NULL,
+  `jam` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pasien`
+--
+
+CREATE TABLE `pasien` (
+  `kd_psn` int(11) NOT NULL,
+  `nm_psn` varchar(50) NOT NULL,
+  `jk` varchar(20) NOT NULL,
+  `usia` varchar(15) NOT NULL,
+  `nohp` varchar(16) NOT NULL,
   `alamat` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `jadwal_praktek`
---
-
-CREATE TABLE `jadwal_praktek` (
-  `hari` int(8) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pasien`
---
-
-CREATE TABLE `pasien` (
-  `Kode_pasien` int(8) NOT NULL,
-  `Nama_Pasien` varchar(100) NOT NULL,
-  `Jenis_Kelamin` varchar(100) NOT NULL,
-  `Umur` varchar(100) NOT NULL,
-  `Alamat` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pendaftaran`
+-- Struktur dari tabel `pendaftaran`
 --
 
 CREATE TABLE `pendaftaran` (
@@ -79,7 +90,7 @@ CREATE TABLE `pendaftaran` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `poli`
+-- Struktur dari tabel `poli`
 --
 
 CREATE TABLE `poli` (
@@ -87,10 +98,20 @@ CREATE TABLE `poli` (
   `nm_poli` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data untuk tabel `poli`
+--
+
+INSERT INTO `poli` (`kd_poli`, `nm_poli`) VALUES
+(1, 'Gigi'),
+(2, 'Saraf'),
+(3, 'Jantung'),
+(4, 'Penyakit dalam');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
@@ -104,7 +125,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`Kode_user`, `Nama_user`, `email`, `Jenis_kelamin`, `No_hp`, `password`, `level`) VALUES
@@ -116,59 +137,65 @@ INSERT INTO `user` (`Kode_user`, `Nama_user`, `email`, `Jenis_kelamin`, `No_hp`,
 --
 
 --
--- Indexes for table `dokter`
+-- Indeks untuk tabel `dokter`
 --
 ALTER TABLE `dokter`
   ADD PRIMARY KEY (`kd_dokter`);
 
 --
--- Indexes for table `jadwal_praktek`
+-- Indeks untuk tabel `jadwal_praktek`
 --
 ALTER TABLE `jadwal_praktek`
-  ADD PRIMARY KEY (`hari`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `pasien`
+-- Indeks untuk tabel `pasien`
 --
 ALTER TABLE `pasien`
-  ADD PRIMARY KEY (`Kode_pasien`);
+  ADD PRIMARY KEY (`kd_psn`);
 
 --
--- Indexes for table `pendaftaran`
+-- Indeks untuk tabel `pendaftaran`
 --
 ALTER TABLE `pendaftaran`
   ADD PRIMARY KEY (`No_pendaftaran`);
 
 --
--- Indexes for table `poli`
+-- Indeks untuk tabel `poli`
 --
 ALTER TABLE `poli`
   ADD PRIMARY KEY (`kd_poli`);
 
 --
--- Indexes for table `user`
+-- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`Kode_user`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `dokter`
+-- AUTO_INCREMENT untuk tabel `dokter`
 --
 ALTER TABLE `dokter`
-  MODIFY `kd_dokter` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `kd_dokter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `poli`
+-- AUTO_INCREMENT untuk tabel `jadwal_praktek`
+--
+ALTER TABLE `jadwal_praktek`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `poli`
 --
 ALTER TABLE `poli`
-  MODIFY `kd_poli` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `kd_poli` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
   MODIFY `Kode_user` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
