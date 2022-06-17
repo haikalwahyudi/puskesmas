@@ -4,17 +4,20 @@ namespace App\Controllers;
 
 use App\Models\M_pengguna;
 use App\Models\M_poli;
+use App\Models\M_dokter;
 
 
 class Puskesmas extends BaseController
 {
     protected $M_pengguna;
     protected $M_poli;
+    protected $M_dokter;
 
     public function __construct()
     {
         $this->M_pengguna = new M_pengguna();
         $this->M_poli = new M_poli();
+        $this->M_dokter = new M_dokter();
     }
 
     public function index()
@@ -28,7 +31,10 @@ class Puskesmas extends BaseController
     // Dokter
     public function ddokter()
     {
-        return view('admin/v_ddokter');
+        $data = [
+            'data'  => $this->M_dokter->ambilData()
+        ];
+        return view('admin/v_ddokter',$data);
     }
     public function tdokter()
     {

@@ -27,11 +27,11 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label>Nama Dokter</label>
-                                <input type="text" name="nama_dokter" class="form-control">
+                                <input type="text" name="nama_dokter" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="exampleSelectRounded0">Spesialis</label>
-                                <select class="custom-select rounded-0" name="spesialis" id="exampleSelectRounded0">
+                                <select class="custom-select rounded-0" name="spesialis" id="exampleSelectRounded0" required>
                                     <option>- Pilih -</option>
                                     <option>Value 1</option>
                                     <option>Value 2</option>
@@ -39,8 +39,19 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>Alamat</label>
-                                <textarea name="alamay" class="form-control" cols="30" rows="10"></textarea>
+                                <label for="jk">Jenis Kelamin</label>
+                                <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" id="customRadio1" name="jk" checked value="Laki-Laki">
+                                    <label for="customRadio1" class="custom-control-label" required>Laki - Laki</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" id="customRadio2" name="jk" value="Perempuan">
+                                    <label for="customRadio2" class="custom-control-label" required>Perempuan</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>No Hp</label>
+                                <input type="number" name="nohp" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputFile">Foto</label>
@@ -53,6 +64,29 @@
                                         <span class="input-group-text">Upload</span>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleSelectRounded0">Hari Peraktik</label>
+                                <select class="custom-select rounded-0" name="hari" id="exampleSelectRounded0" required>
+                                    <option>- Pilih -</option>
+                                    <option value="Senin">Senin</option>
+                                    <option value="Selasa">Selasa</option>
+                                    <option value="Rabu">Rabu</option>
+                                    <option value="Kamis">Kamis</option>
+                                    <option value="Jum'at">Jum'at</option>
+                                    <option value="Sabtu">Sabtu</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleSelectRounded0">Jam</label>
+                                <select class="custom-select rounded-0" name="hari" id="exampleSelectRounded0" required>
+                                    <option>- Pilih -</option>
+                                    <option value="09:00 - 15:00">09:00 - 15:00</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Alamat</label>
+                                <textarea name="alamat" class="form-control" cols="30" rows="10"></textarea>
                             </div>
                         </div>
                         <!-- /.card-body -->
