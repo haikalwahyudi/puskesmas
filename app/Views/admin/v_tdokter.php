@@ -23,7 +23,7 @@
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form>
+                    <form action="<?= base_url(); ?>/puskesmas/tdokterAksi" method="POST">
                         <div class="card-body">
                             <div class="form-group">
                                 <label>Nama Dokter</label>
@@ -57,7 +57,7 @@
                                 <label for="exampleInputFile">Foto</label>
                                 <div class="input-group">
                                     <div class="custom-file">
-                                        <input type="file" name="foto" class="custom-file-input" id="exampleInputFile">
+                                        <input type="file" name="poto" class="custom-file-input" id="exampleInputFile">
                                         <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                     </div>
                                     <div class="input-group-append">
@@ -79,7 +79,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleSelectRounded0">Jam</label>
-                                <select class="custom-select rounded-0" name="hari" id="exampleSelectRounded0" required>
+                                <select class="custom-select rounded-0" name="jam" id="exampleSelectRounded0" required>
                                     <option>- Pilih -</option>
                                     <option value="09:00 - 15:00">09:00 - 15:00</option>
                                 </select>
