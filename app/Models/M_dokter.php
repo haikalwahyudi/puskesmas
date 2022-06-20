@@ -15,4 +15,11 @@ class M_dokter extends Model{
 			return $this->getWhere(['kd_dokter' => $kd]);
 		}
 	}
+
+	public function	simpan($data)
+	{
+		$simpan = $this->db->table($this->table);
+
+		return $simpan->insert($data);
+	}
 }

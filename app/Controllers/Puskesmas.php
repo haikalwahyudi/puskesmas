@@ -40,6 +40,21 @@ class Puskesmas extends BaseController
     {
         return view('admin/v_tdokter');
     }
+    public function tdokterAksi()
+    {
+        $this->M_dokter->simpan([
+                'nm_dokter'     => $this->request->getVar('nama_dokter'),
+                'kd_poli'       => $this->request->getVar('spesialis'),
+                'jk'            => $this->request->getVar('jk'),
+                'no_hp'         => $this->request->getVar('nohp'),
+                'poto'          => $this->request->getVar('poto'),
+                'hari_praktik'  => $this->request->getVar('hari'),
+                'id'            => $this->request->getVar('jam'),
+                'alamat'        => $this->request->getVar('alamat'),
+        ]);
+        session()->setFlashdata('simpan','Data dokter berhasil disimpan');
+        return redirec()->to('/puskesmas/tdokter');
+    }
     public function udokter()
     {
         return view('admin/v_udokter');
