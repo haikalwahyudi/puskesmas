@@ -65,7 +65,7 @@
                             <div class="form-group">
                                 <label for="exampleInputFile">Foto</label>
                                 <div class="input-group">
-                                    <input type="file" name="poto">
+                                    <input type="file" name="poto" required>
                                 </div>
                             </div>
                             <div class="form-group">

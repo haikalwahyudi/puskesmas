@@ -40,7 +40,7 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <table class="table table-striped text-center responsive nowrap table-hover" width="100%">
+                        <table class="table table-striped text-center table-responsive nowrap table-hover" width="100%">
                             <thead>
                                 <tr>
                                     <td>No</td>
@@ -65,12 +65,12 @@
                                         <td><?= $no++; ?></td>
                                         <td><?= $d->kd_dokter; ?></td>
                                         <td><?= $d->nm_dokter; ?></td>
-                                        <td><?= $d->kd_poli; ?></td>
+                                        <td><?= $d->nm_poli; ?></td>
                                         <td><?= $d->jk; ?></td>
                                         <td><?= $d->no_hp; ?></td>
-                                        <td><?= $d->poto; ?></td>
+                                        <td><img src="<?= base_url(); ?>/image/<?= $d->poto; ?>" width="50" alt="Poto"></td>
                                         <td><?= $d->hari_praktik; ?></td>
-                                        <td><?= $d->id; ?></td>
+                                        <td><?= $d->jam; ?></td>
                                         <td><?= $d->alamat; ?></td>
                                         <td>
                                             <a href="<?= base_url(); ?>/puskesmas/hdokterAksi/<?= $d->kd_dokter; ?>" onclick="return confirm('Yakin ingin menghapus data ini')" class="btn btn-danger btn-sm">Hapus</a>

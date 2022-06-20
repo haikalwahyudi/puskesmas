@@ -12,8 +12,8 @@ class M_dokter extends Model
 	{
 		if ($kd === false) {
 			return $this->db->table($this->table)
-				->join('poli', 'poli.kd_poli = dokter.kd_dokter')
-				->join('jadwal_praktek', 'jadwal_praktek.id = dokter.kd_dokter')
+				->join('poli', 'poli.kd_poli = dokter.kd_poli')
+				->join('jadwal_praktek', 'jadwal_praktek.id = dokter.id')
 				->get()->getResult();
 		} else {
 			return $this->getWhere(['kd_dokter' => $kd]);

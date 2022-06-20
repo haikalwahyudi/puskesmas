@@ -68,13 +68,23 @@ class Puskesmas extends BaseController
     }
     public function hdokterAksi($kd)
     {
+        $poto = $this->M_dokter->ambilData($kd)->getRow();
+        // dd($poto);
+        if ($poto->poto != "default.png") {
+            unlink('image/' . $poto->poto);
+        }
         $this->M_dokter->hapus($kd);
         session()->setFlashdata('hapus', 'Data dokter berhasil dihapus');
         return redirect()->to('/puskesmas/ddokter');
     }
-    public function udokter()
+    public function udokter($kd)
     {
-        return view('admin/v_udokter');
+        $data = [
+            'data'     => $this->M_dokter->ambilData($kd)->getRow(),
+            'dpoli'     => $this->M_poli->ambilData(),
+            'djadwal'   => $this->M_jadwal->ambilData(),
+        ];
+        return view('admin/v_udokter', $data);
     }
     // And Dokter
 
