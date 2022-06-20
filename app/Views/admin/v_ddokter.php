@@ -17,6 +17,21 @@
 
         <div class="row">
             <div class="col-md-12">
+                <!-- Alret -->
+                <?php if (session()->getFlashdata('hapus')) { ?>
+                    <div class="alert alert-danger alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <h5><i class="icon fas fa-check"></i> Pemberitahuan</h5>
+                        <?= session()->getFlashdata('hapus'); ?>
+                    </div>
+                <?php } elseif (session()->getFlashdata('ubah')) { ?>
+                    <div class="alert alert-warning alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <h5><i class="icon fas fa-check"></i> Pemberitahuan</h5>
+                        <?= session()->getFlashdata('ubah'); ?>
+                    </div>
+                <?php } ?>
+                <!-- Alret -->
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">
@@ -44,25 +59,25 @@
                             <tbody>
                                 <?php
                                 $no = 1;
-                                    foreach ($data as $d) {
+                                foreach ($data as $d) {
                                 ?>
-                                <tr>
-                                    <td><?= $no++; ?></td>
-                                    <td><?= $d->kd_dokter; ?></td>
-                                    <td><?= $d->nm_dokter; ?></td>
-                                    <td><?= $d->kd_poli; ?></td>
-                                    <td><?= $d->jk; ?></td>
-                                    <td><?= $d->no_hp; ?></td>
-                                    <td><?= $d->poto; ?></td>
-                                    <td><?= $d->hari_praktik; ?></td>
-                                    <td><?= $d->id; ?></td>
-                                    <td><?= $d->alamat; ?></td>
-                                    <td>
-                                        <button class="btn btn-danger btn-sm">Hapus</button>
-                                        <a href="<?= base_url(); ?>/puskesmas/udokter" class="btn btn-warning btn-sm">Ubah</a>
-                                    </td>
-                                </tr>
-                            <?php } ?>
+                                    <tr>
+                                        <td><?= $no++; ?></td>
+                                        <td><?= $d->kd_dokter; ?></td>
+                                        <td><?= $d->nm_dokter; ?></td>
+                                        <td><?= $d->kd_poli; ?></td>
+                                        <td><?= $d->jk; ?></td>
+                                        <td><?= $d->no_hp; ?></td>
+                                        <td><?= $d->poto; ?></td>
+                                        <td><?= $d->hari_praktik; ?></td>
+                                        <td><?= $d->id; ?></td>
+                                        <td><?= $d->alamat; ?></td>
+                                        <td>
+                                            <a href="<?= base_url(); ?>/puskesmas/hdokterAksi/<?= $d->kd_dokter; ?>" onclick="return confirm('Yakin ingin menghapus data ini')" class="btn btn-danger btn-sm">Hapus</a>
+                                            <a href="<?= base_url(); ?>/puskesmas/udokter/<?= $d->kd_dokter; ?>" class="btn btn-warning btn-sm">Ubah</a>
+                                        </td>
+                                    </tr>
+                                <?php } ?>
                             </tbody>
                         </table>
                     </div>

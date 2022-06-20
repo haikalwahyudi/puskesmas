@@ -4,14 +4,18 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class M_dokter extends Model{
+class M_dokter extends Model
+{
 	protected $table = "dokter";
 
-	public function ambilData($kd=false)
+	public function ambilData($kd = false)
 	{
-		if($kd === false){
-			return $this->db->table($this->table)->get()->getResult();
-		}else{
+		if ($kd === false) {
+			return $this->db->table($this->table)
+				->join('poli', 'poli.kd_poli = dokter.kd_dokter')
+				->join('jadwal_praktek', 'jadwal_praktek.id = dokter.kd_dokter')
+				->get()->getResult();
+		} else {
 			return $this->getWhere(['kd_dokter' => $kd]);
 		}
 	}
@@ -21,5 +25,11 @@ class M_dokter extends Model{
 		$simpan = $this->db->table($this->table);
 
 		return $simpan->insert($data);
+	}
+	public function hapus($kd)
+	{
+		$hapus = $this->db->table($this->table);
+
+		return $hapus->delete(['kd_dokter' => $kd]);
 	}
 }

@@ -17,13 +17,22 @@
 
         <div class="row">
             <div class="col-md-12">
+                <!-- Alert -->
+                <?php if (session()->getFlashdata('simpan')) { ?>
+                    <div class="alert alert-success alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <h5><i class="icon fas fa-check"></i> Pemberitahuan</h5>
+                        <?= session()->getFlashdata('simpan'); ?> <a href="<?= base_url(); ?>/puskesmas/ddokter">Lihat data</a>
+                    </div>
+                <?php } ?>
+                <!-- Alert -->
                 <div class="card card-success">
                     <div class="card-header">
                         <h3 class="card-title">Tambah Data</h3>
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form action="<?= base_url(); ?>/puskesmas/tdokterAksi" method="POST">
+                    <form action="<?= base_url(); ?>/puskesmas/tdokterAksi" method="POST" enctype="multipart/form-data">
                         <div class="card-body">
                             <div class="form-group">
                                 <label>Nama Dokter</label>
@@ -33,9 +42,9 @@
                                 <label for="exampleSelectRounded0">Spesialis</label>
                                 <select class="custom-select rounded-0" name="spesialis" id="exampleSelectRounded0" required>
                                     <option>- Pilih -</option>
-                                    <option>Value 1</option>
-                                    <option>Value 2</option>
-                                    <option>Value 3</option>
+                                    <?php foreach ($dpoli as $dp) { ?>
+                                        <option value="<?= $dp->kd_poli; ?>"><?= $dp->nm_poli; ?></option>
+                                    <?php } ?>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -56,13 +65,7 @@
                             <div class="form-group">
                                 <label for="exampleInputFile">Foto</label>
                                 <div class="input-group">
-                                    <div class="custom-file">
-                                        <input type="file" name="poto" class="custom-file-input" id="exampleInputFile">
-                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                    </div>
-                                    <div class="input-group-append">
-                                        <span class="input-group-text">Upload</span>
-                                    </div>
+                                    <input type="file" name="poto">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -81,7 +84,9 @@
                                 <label for="exampleSelectRounded0">Jam</label>
                                 <select class="custom-select rounded-0" name="jam" id="exampleSelectRounded0" required>
                                     <option>- Pilih -</option>
-                                    <option value="09:00 - 15:00">09:00 - 15:00</option>
+                                    <?php foreach ($djadwal as $dj) { ?>
+                                        <option value="<?= $dj->id; ?>"><?= $dj->jam; ?></option>
+                                    <?php } ?>
                                 </select>
                             </div>
                             <div class="form-group">
