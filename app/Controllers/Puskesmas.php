@@ -34,7 +34,7 @@ class Puskesmas extends BaseController
         $data = [
             'data'  => $this->M_dokter->ambilData()
         ];
-        return view('admin/v_ddokter',$data);
+        return view('admin/v_ddokter', $data);
     }
     public function tdokter()
     {
