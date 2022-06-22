@@ -86,6 +86,32 @@ class Puskesmas extends BaseController
         ];
         return view('admin/v_udokter', $data);
     }
+    public function udokterAksi()
+    {
+        $kd_dokter = $this->request->getVar('kd_dokter');
+        $inputPoto = $this->request->getFile('poto');
+        if ($inputPoto->getError() == 4) {
+            $potoLama = $this->request->getVar('old_poto');
+            $nmPoto = $potoLama;
+        } else {
+            $nmPoto = $inputPoto->getRandomName();
+            $inputPoto->move('image/', $nmPoto);
+            unlink('image/' . $this->request->getVar('old_poto'));
+        }
+        $this->M_dokter->ubah([
+            'nm_dokter'     => $this->request->getVar('nama_dokter'),
+            'kd_poli'       => $this->request->getVar('spesialis'),
+            'jk'            => $this->request->getVar('jk'),
+            'no_hp'         => $this->request->getVar('nohp'),
+            'poto'          => $nmPoto,
+            'hari_praktik'  => $this->request->getVar('hari'),
+            'id'            => $this->request->getVar('jam'),
+            'alamat'        => $this->request->getVar('alamat'),
+        ], $kd_dokter);
+
+        session()->setFlashdata('ubah', 'Data dokter berhasil diubah');
+        return redirect()->to('puskesmas/ddokter');
+    }
     // And Dokter
 
     // Pasien

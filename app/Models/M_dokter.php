@@ -32,4 +32,10 @@ class M_dokter extends Model
 
 		return $hapus->delete(['kd_dokter' => $kd]);
 	}
+	public function ubah($data, $kd)
+	{
+		$ubah = $this->db->table($this->table);
+		$ubah->where(['kd_dokter' => $kd]);
+		return $ubah->update($data);
+	}
 }
