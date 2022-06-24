@@ -20,4 +20,9 @@ class M_pasien extends model
 		$simpan = $this->db->table($this->table);
 		return $simpan->insert($data);
 	}
+	public function hapus($kd_psn)
+	{
+		$hapus = $this->db->table($this->table);
+		return $hapus->delete(['kd_psn' => $kd_psn]);
+	}
 }

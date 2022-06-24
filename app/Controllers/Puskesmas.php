@@ -92,6 +92,12 @@ class Puskesmas extends BaseController
     {
         return view('admin/v_upasien');
     }
+    public function hpasienAksi($kd_psn)
+    {
+        $this->M_pasien->hapus($kd_psn);
+        session()->setFlashdata('hapus','Data pasien berhasil dihapus');
+        return redirect()->to('/puskesmas/dpasien');
+    }
     // And Pasien
 
     // Poli
