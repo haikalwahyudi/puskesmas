@@ -28,6 +28,7 @@
                         <table class="table table-striped text-center responsive nowrap table-hover" width="100%">
                             <thead>
                                 <tr>
+                                    <th>No</th>
                                     <th>Kode Pasien</th>
                                     <th>Nama Pasien</th>
                                     <th>Jenis Kelamin</th>
@@ -37,32 +38,24 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php
+                                    $no = 1;
+                                    foreach ($data as $d) {
+                                ?>
                                 <tr>
-                                    <td>123</td>
-                                    <td>Haikal</td>
-                                    <td>Spesialis Paru-Paru</td>
-                                    <td>Lotim</td>
+                                    <td><?= $no++; ?></td>
+                                    <td><?= $d->kd_psn; ?></td>
+                                    <td><?= $d->nm_psn; ?></td>
+                                    <td><?= $d->jk; ?></td>
+                                    <td><?= $d->usia; ?></td>
+                                    <td><?= $d->nohp; ?></td>
+                                    <td><?= $d->alamat; ?></td>
                                     <td>
-                                        <img src="<?= base_url() ?>/image/123.png" width="80" alt="Gambar">
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-danger btn-sm">Hapus</button>
-                                        <a href="<?= base_url(); ?>/puskesmas/upasien" class="btn btn-warning btn-sm">Ubah</a>
+                                        <a href="" class="btn btn-danger btn-sm" title="Hapus"><i class="fa fa-trash"></i></a>
+                                        <a href="<?= base_url(); ?>/puskesmas/upasien" class="btn btn-warning btn-sm" title="Ubah"><i class="fa fa-edit"></i></a>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>123</td>
-                                    <td>Haikal</td>
-                                    <td>Spesialis Paru-Paru</td>
-                                    <td>Lotim</td>
-                                    <td>
-                                        <img src="<?= base_url() ?>/image/123.png" width="80" alt="Gambar">
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-danger btn-sm">Hapus</button>
-                                        <button class="btn btn-warning btn-sm">Ubah</button>
-                                    </td>
-                                </tr>
+                                <?php } ?>
                             </tbody>
                         </table>
                     </div>
