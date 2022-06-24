@@ -9,3 +9,11 @@ CRITICAL - 2022-06-23 22:37:35 --> syntax error, unexpected '}', expecting ';'
 #7 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #8 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #9 {main}
+CRITICAL - 2022-06-23 23:08:45 --> syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+#0 C:\xampp\htdocs\puskesmas\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('puskesmas/tpasi...')
+#1 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('puskesmas/tpasi...')
+#2 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

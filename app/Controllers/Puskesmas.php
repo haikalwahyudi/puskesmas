@@ -76,6 +76,18 @@ class Puskesmas extends BaseController
     {
         return view('admin/v_tpasien');
     }
+    public function tpasienAksi()
+    {
+        $this->M_pasien->simpan([
+            'nm_psn'    => $this->request->getVar('nama_pasien'),
+            'jk'        => $this->request->getVar('jk'),
+            'usia'      => $this->request->getVar('umur'),
+            'nohp'      => $this->request->getVar('nohp'),
+            'alamat'    => $this->request->getVar('alamat'),
+        ]);
+        session()->setFlashdata('simpan','Data pasien berhasil disimpan');
+        return redirect()->to('/puskesmas/tpasien');
+    }
     public function upasien()
     {
         return view('admin/v_upasien');
