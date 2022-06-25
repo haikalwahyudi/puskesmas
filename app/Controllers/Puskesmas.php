@@ -37,7 +37,7 @@ class Puskesmas extends BaseController
         $data = [
             'data'  => $this->M_dokter->ambilData()
         ];
-        return view('admin/v_ddokter',$data);
+        return view('admin/v_ddokter', $data);
     }
     public function tdokter()
     {
@@ -46,21 +46,37 @@ class Puskesmas extends BaseController
     public function tdokterAksi()
     {
         $this->M_dokter->simpan([
-                'nm_dokter'     => $this->request->getVar('nama_dokter'),
-                'kd_poli'       => $this->request->getVar('spesialis'),
-                'jk'            => $this->request->getVar('jk'),
-                'no_hp'         => $this->request->getVar('nohp'),
-                'poto'          => $this->request->getVar('poto'),
-                'hari_praktik'  => $this->request->getVar('hari'),
-                'id'            => $this->request->getVar('jam'),
-                'alamat'        => $this->request->getVar('alamat'),
+            'nm_dokter'     => $this->request->getVar('nama_dokter'),
+            'kd_poli'       => $this->request->getVar('spesialis'),
+            'jk'            => $this->request->getVar('jk'),
+            'no_hp'         => $this->request->getVar('nohp'),
+            'poto'          => $this->request->getVar('poto'),
+            'hari_praktik'  => $this->request->getVar('hari'),
+            'id'            => $this->request->getVar('jam'),
+            'alamat'        => $this->request->getVar('alamat'),
         ]);
-        session()->setFlashdata('simpan','Data dokter berhasil disimpan');
-        return redirec()->to('/puskesmas/tdokter');
+        session()->setFlashdata('simpan', 'Data dokter berhasil disimpan');
+        return redirect()->to('/puskesmas/tdokter');
     }
-    public function udokter()
+    public function hdokter($kd)
     {
-        return view('admin/v_udokter');
+        $poto = $this->M_dokter->ambilData($kd)->getRow();
+        // dd($poto);
+        if ($poto->poto != "default.png") {
+            unlink('image/' . $poto->poto);
+        }
+        $this->M_dokter->hapus($kd);
+        session()->setFlashdata('hapus', 'Data dokter berhasil dihapus');
+        return redirect()->to('/puskesmas/ddokter');
+    }
+    public function udokter($kd)
+    {
+        $data = [
+            'data'     => $this->M_dokter->ambilData($kd)->getRow(),
+            'dpoli'     => $this->M_poli->ambilData(),
+            'djadwal'   => $this->M_jadwal->ambilData(),
+        ];
+        return view('admin/v_udokter', $data);
     }
     // And Dokter
 
@@ -85,7 +101,7 @@ class Puskesmas extends BaseController
             'nohp'      => $this->request->getVar('nohp'),
             'alamat'    => $this->request->getVar('alamat'),
         ]);
-        session()->setFlashdata('simpan','Data pasien berhasil disimpan');
+        session()->setFlashdata('simpan', 'Data pasien berhasil disimpan');
         return redirect()->to('/puskesmas/tpasien');
     }
     public function upasien()
@@ -95,7 +111,7 @@ class Puskesmas extends BaseController
     public function hpasienAksi($kd_psn)
     {
         $this->M_pasien->hapus($kd_psn);
-        session()->setFlashdata('hapus','Data pasien berhasil dihapus');
+        session()->setFlashdata('hapus', 'Data pasien berhasil dihapus');
         return redirect()->to('/puskesmas/dpasien');
     }
     // And Pasien
