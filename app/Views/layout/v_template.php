@@ -32,9 +32,9 @@
     <div class="wrapper">
 
         <!-- Preloader -->
-        <div class="preloader flex-column justify-content-center align-items-center">
+        <!-- <div class="preloader flex-column justify-content-center align-items-center">
             <img class="animation__shake" src="<?= base_url() ?>/template/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-        </div>
+        </div> -->
 
         <!-- Navbar -->
         <?= $this->include("layout/v_header"); ?>
@@ -98,9 +98,9 @@
     <!-- AdminLTE App -->
     <script src="<?= base_url() ?>/template/dist/js/adminlte.js"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="<?= base_url() ?>/template/dist/js/demo.js"></script>
+    <!-- <script src="<?= base_url() ?>/template/dist/js/demo.js"></script> -->
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="<?= base_url() ?>/template/dist/js/pages/dashboard.js"></script>
+    <!-- <script src="<?= base_url() ?>/template/dist/js/pages/dashboard.js"></script> -->
 </body>
 
 </html>

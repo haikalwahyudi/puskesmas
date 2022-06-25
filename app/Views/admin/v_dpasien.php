@@ -24,7 +24,7 @@
                         <h5><i class="icon fas fa-check"></i> Pemberitahuan</h5>
                         <?= session()->getFlashdata('hapus'); ?>
                     </div>
-                <?php }elseif (session()->getFlashdata('ubah')) { ?>
+                <?php } elseif (session()->getFlashdata('ubah')) { ?>
                     <div class="alert alert-warning alert-dismissible">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                         <h5><i class="icon fas fa-check"></i> Pemberitahuan</h5>
@@ -48,28 +48,29 @@
                                     <th>Nama Pasien</th>
                                     <th>Jenis Kelamin</th>
                                     <th>Umur</th>
+                                    <th>No Hp</th>
                                     <th>Alamat</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
-                                    $no = 1;
-                                    foreach ($data as $d) {
+                                $no = 1;
+                                foreach ($data as $d) {
                                 ?>
-                                <tr>
-                                    <td><?= $no++; ?></td>
-                                    <td><?= $d->kd_psn; ?></td>
-                                    <td><?= $d->nm_psn; ?></td>
-                                    <td><?= $d->jk; ?></td>
-                                    <td><?= $d->usia; ?></td>
-                                    <td><?= $d->nohp; ?></td>
-                                    <td><?= $d->alamat; ?></td>
-                                    <td>
-                                        <a href="<?= base_url() ?>/puskesmas/hpasienAksi/<?= $d->kd_psn; ?>" class="btn btn-danger btn-sm" title="Hapus" onclick="return confirm('Yakin ingin menghapus data ini!')"><i class="fa fa-trash"></i></a>
-                                        <a href="<?= base_url(); ?>/puskesmas/upasien/<?= $d->kd_psn; ?>" class="btn btn-warning btn-sm" title="Ubah"><i class="fa fa-edit"></i></a>
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <td><?= $no++; ?></td>
+                                        <td><?= $d->kd_psn; ?></td>
+                                        <td><?= $d->nm_psn; ?></td>
+                                        <td><?= $d->jk; ?></td>
+                                        <td><?= $d->usia; ?></td>
+                                        <td><?= $d->nohp; ?></td>
+                                        <td><?= $d->alamat; ?></td>
+                                        <td>
+                                            <a href="<?= base_url() ?>/puskesmas/hpasienAksi/<?= $d->kd_psn; ?>" class="btn btn-danger btn-sm" title="Hapus" onclick="return confirm('Yakin ingin menghapus data ini!')"><i class="fa fa-trash"></i></a>
+                                            <a href="<?= base_url(); ?>/puskesmas/upasien/<?= $d->kd_psn; ?>" class="btn btn-warning btn-sm" title="Ubah"><i class="fa fa-edit"></i></a>
+                                        </td>
+                                    </tr>
                                 <?php } ?>
                             </tbody>
                         </table>

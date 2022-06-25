@@ -23,30 +23,39 @@
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form>
+                    <form action="<?= base_url(); ?>/puskesmas/upasienAksi" method="POST">
                         <div class="card-body">
                             <div class="form-group">
                                 <label>Nama Pasien</label>
-                                <input type="text" name="nama_pasien" class="form-control">
+                                <input type="text" name="nama_pasien" value="<?= $data->nm_psn; ?>" class="form-control">
+                                <input type="hidden" name="kd_psn" value="<?= $data->kd_psn; ?>">
                             </div>
                             <div class="form-group">
                                 <label for="jk">Jenis Kelamin</label>
                                 <div class="custom-control custom-radio">
-                                    <input class="custom-control-input" type="radio" id="customRadio1" name="jk" checked>
+                                    <input class="custom-control-input" type="radio" id="customRadio1" name="jk" <?php if ($data->jk == "Laki-Laki") {
+                                                                                                                        echo 'checked';
+                                                                                                                    } ?> value="Laki -Laki">
                                     <label for="customRadio1" class="custom-control-label">Laki - Laki</label>
                                 </div>
                                 <div class="custom-control custom-radio">
-                                    <input class="custom-control-input" type="radio" id="customRadio2" name="jk">
+                                    <input class="custom-control-input" type="radio" id="customRadio2" name="jk" <?php if ($data->jk == "Perempuan") {
+                                                                                                                        echo 'checked';
+                                                                                                                    } ?> value="Perempuan">
                                     <label for="customRadio2" class="custom-control-label">Perempuan</label>
                                 </div>
                             </div>
                             <div class="form-group">
+                                <label>No Hp</label>
+                                <input type="number" name="nohp" class="form-control" value="<?= $data->nohp; ?>" required>
+                            </div>
+                            <div class="form-group">
                                 <label>Umur</label>
-                                <input type="text" name="umur" class="form-control">
+                                <input type="text" name="umur" class="form-control" value="<?= $data->usia; ?>">
                             </div>
                             <div class="form-group">
                                 <label>Alamat</label>
-                                <textarea name="alamay" class="form-control" cols="30" rows="10"></textarea>
+                                <textarea name="alamat" class="form-control" cols="30" rows="10"><?= $data->alamat; ?></textarea>
                             </div>
 
                         </div>

@@ -41,11 +41,11 @@
                             <div class="form-group">
                                 <label for="jk">Jenis Kelamin</label>
                                 <div class="custom-control custom-radio">
-                                    <input class="custom-control-input" type="radio" id="customRadio1" name="jk" checked>
+                                    <input class="custom-control-input" type="radio" id="customRadio1" name="jk" checked value="Laki-Laki">
                                     <label for="customRadio1" class="custom-control-label">Laki - Laki</label>
                                 </div>
                                 <div class="custom-control custom-radio">
-                                    <input class="custom-control-input" type="radio" id="customRadio2" name="jk">
+                                    <input class="custom-control-input" type="radio" id="customRadio2" name="jk" value="Perempuan">
                                     <label for="customRadio2" class="custom-control-label">Perempuan</label>
                                 </div>
                             </div>

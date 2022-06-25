@@ -73,8 +73,8 @@
                                         <td><?= $d->jam; ?></td>
                                         <td><?= $d->alamat; ?></td>
                                         <td>
-                                            <a href="<?= base_url(); ?>/puskesmas/hdokterAksi/<?= $d->kd_dokter; ?>" onclick="return confirm('Yakin ingin menghapus data ini')" class="btn btn-danger btn-sm">Hapus</a>
-                                            <a href="<?= base_url(); ?>/puskesmas/udokter/<?= $d->kd_dokter; ?>" class="btn btn-warning btn-sm">Ubah</a>
+                                            <a href="<?= base_url(); ?>/puskesmas/hdokterAksi/<?= $d->kd_dokter; ?>" onclick="return confirm('Yakin ingin menghapus data ini')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                                            <a href="<?= base_url(); ?>/puskesmas/udokter/<?= $d->kd_dokter; ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
                                         </td>
                                     </tr>
                                 <?php } ?>
