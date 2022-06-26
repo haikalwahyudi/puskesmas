@@ -39,7 +39,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
+                    <a href="<?= base_url(); ?>/puskesmas/djadwal" class="nav-link">
                         <i class="nav-icon fas fa-user"></i>
                         <p>
                             Jadwal Praktik

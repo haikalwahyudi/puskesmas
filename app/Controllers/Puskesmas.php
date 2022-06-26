@@ -292,4 +292,53 @@ class Puskesmas extends BaseController
         return redirect()->to('/puskesmas/daftarAkun');
     }
     // And Daftar Akun1
+
+    // Jadwal
+    public function djadwal()
+    {
+        $data = [
+            'data'  => $this->M_jadwal->ambilData()
+        ];
+        return view('/admin/v_jadwal', $data);
+    }
+    public function tjadwal()
+    {
+        return view('/admin/v_tjadwal');
+    }
+    public function tjadwalAksi()
+    {
+        $dariJam = $this->request->getVar('jam1');
+        $sampaiJam = $this->request->getVar('jam2');
+        $this->M_jadwal->simpan([
+            'jam'   => $dariJam . "-" . $sampaiJam
+        ]);
+        session()->setFlashdata('simpan', 'Data jadwal berhasil disimpan');
+        return redirect()->to('/puskesmas/tjadwal');
+    }
+    public function hjadwalAksi($id)
+    {
+        $this->M_jadwal->hapus($id);
+        session()->setFlashdata('hapus', 'Data jadwal berhasil dihapus');
+        return redirect()->to('/puskesmas/djadwal');
+    }
+    public function ujadwal($id)
+    {
+        $data = [
+            'data'  => $this->M_jadwal->ambilData($id)->getRow()
+        ];
+        return view('/admin/v_ujadwal', $data);
+    }
+    public function ujadwalAksi()
+    {
+        $id = $this->request->getVar('id');
+        $dariJam = $this->request->getVar('jam1');
+        $sampaiJam = $this->request->getVar('jam2');
+        // dd($dariJam, $sampaiJam);
+        $this->M_jadwal->ubah([
+            'jam'   => $dariJam . "-" . $sampaiJam
+        ], $id);
+        session()->setFlashdata('ubah', 'Data jadwal berhasil diubah');
+        return redirect()->to('/puskesmas/djadwal');
+    }
+    // And Jadwal
 }
