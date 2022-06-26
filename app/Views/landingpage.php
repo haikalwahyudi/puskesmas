@@ -33,9 +33,15 @@
                     <li class="nav-item active mr-4">
                         <a class="nav-link text-white" href="<?= base_url(); ?>/puskesmas">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item mr-4">
-                        <a class="nav-link text-white" href="<?= base_url(); ?>/puskesmas/daftar">Daftar</a>
-                    </li>
+                    <?php if (session()->get('log_in') == true) { ?>
+                        <li class="nav-item mr-4">
+                            <a class="nav-link text-white" href="#">Daftar</a>
+                        </li>
+                    <?php } else { ?>
+                        <li class="nav-item mr-4">
+                            <a class="nav-link text-white" href="<?= base_url(); ?>/puskesmas/daftar">Daftar</a>
+                        </li>
+                    <?php } ?>
                     <li class="nav-item mr-4">
                         <a class="nav-link text-white" href="#">Kontak</a>
                     </li>
@@ -89,9 +95,15 @@
                     </div>
 
                     <div class="read-more mt-4">
-                        <a href="<?= base_url(); ?>/puskesmas/daftar" class="btn-read">
-                            DAFTAR
-                        </a>
+                        <?php if (session()->get('log_in') == true) { ?>
+                            <a href="#" class="btn-read">
+                                DAFTAR
+                            </a>
+                        <?php } else { ?>
+                            <a href="<?= base_url(); ?>/puskesmas/daftar" class="btn-read">
+                                DAFTAR
+                            </a>
+                        <?php } ?>
                     </div>
                 </div>
 

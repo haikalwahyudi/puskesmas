@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Lockscreen</title>
+    <title>Pendaftaran</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -18,44 +18,57 @@
     <!-- Automatic element centering -->
     <div class="lockscreen-wrapper">
         <div class="lockscreen-logo">
-            <a href="#"><b>Admin</b>LTE</a>
+            <h2>Pendaftaran Online Puskesmas SESELA</h2>
         </div>
-        <!-- User name -->
-        <div class="lockscreen-name">John Doe</div>
-
-        <!-- START LOCK SCREEN ITEM -->
-        <div class="lockscreen-item">
-            <!-- lockscreen image -->
-            <div class="lockscreen-image">
-                <img src="<?= base_url() ?>/template/dist/img/user1-128x128.jpg" alt="User Image">
-            </div>
-            <!-- /.lockscreen-image -->
-
-            <!-- lockscreen credentials (contains the form) -->
-            <form class="lockscreen-credentials">
-                <div class="input-group">
-                    <input type="password" class="form-control" placeholder="password">
-
-                    <div class="input-group-append">
-                        <button type="button" class="btn">
-                            <i class="fas fa-arrow-right text-muted"></i>
-                        </button>
+        <div class="col-12 col-sm-12">
+            <div class="card card-success card-tabs">
+                <div class="card-header p-0 pt-1">
+                    <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="custom-tabs-one-home-tab" data-toggle="pill" href="#custom-tabs-one-home" role="tab" aria-controls="custom-tabs-one-home" aria-selected="true">Baru</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="custom-tabs-one-profile-tab" data-toggle="pill" href="#custom-tabs-one-profile" role="tab" aria-controls="custom-tabs-one-profile" aria-selected="false">Pasien Lama</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <div class="tab-content" id="custom-tabs-one-tabContent">
+                        <div class="tab-pane fade show active" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
+                            <form action="#">
+                                <div class="form-group">
+                                    <label for="">Kunjungan</label>
+                                    <input type="text" name="kunjungan" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Tanggan Daftar</label>
+                                    <input type="text" name="tgl" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Poli Tujuan</label>
+                                    <input type="text" name="poli" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">BPJS</label>
+                                    <input type="text" name="bpjs" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Umum</label>
+                                    <input type="text" name="umum" class="form-control">
+                                </div>
+                                <div class="card-foote">
+                                    <button class="btn btn-success">Daftar</button>
+                                    <button class="btn btn-danger">Batal</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="custom-tabs-one-profile" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
+                            Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris pharetra purus ut ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas sollicitudin, nisi a luctus interdum, nisl ligula placerat mi, quis posuere purus ligula eu lectus. Donec nunc tellus, elementum sit amet ultricies at, posuere nec nunc. Nunc euismod pellentesque diam.
+                        </div>
                     </div>
                 </div>
-            </form>
-            <!-- /.lockscreen credentials -->
-
-        </div>
-        <!-- /.lockscreen-item -->
-        <div class="help-block text-center">
-            Enter your password to retrieve your session
-        </div>
-        <div class="text-center">
-            <a href="login.html">Or sign in as a different user</a>
-        </div>
-        <div class="lockscreen-footer text-center">
-            Copyright &copy; 2014-2021 <b><a href="https://adminlte.io" class="text-black">AdminLTE.io</a></b><br>
-            All rights reserved
+                <!-- /.card -->
+            </div>
         </div>
     </div>
     <!-- /.center -->

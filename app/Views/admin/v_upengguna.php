@@ -66,7 +66,7 @@
                                                             } ?>>Admin</option>
                                     <option value="Pasien" <?php if ($dp['level'] == "Pasien") {
                                                                 echo 'selected';
-                                                            } ?>>pasien</option>
+                                                            } ?>>Pasien</option>
                                 </select>
                             </div>
 
