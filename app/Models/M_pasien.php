@@ -16,6 +16,12 @@ class M_pasien extends model
 			return $this->getWhere(['kd_psn' => $kd_psn]);
 		}
 	}
+
+	public function cek($email)
+	{
+		return $this->getWhere(['email' => $email]);
+	}
+
 	public function simpan($data)
 	{
 		$simpan = $this->db->table($this->table);

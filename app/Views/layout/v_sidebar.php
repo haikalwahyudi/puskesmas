@@ -63,16 +63,16 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-header">DATA</li>
+                <!-- <li class="nav-header">DATA</li>
                 <li class="nav-item">
                     <a href="<?= base_url(); ?>/puskesmas/dpendaftaran" class="nav-link">
                         <i class="nav-icon fas fa-file-signature"></i>
-                        <!-- <i class="fa-solid fa-file-signature"></i> -->
+                        <i class="fa-solid fa-file-signature"></i>
                         <p>
                             Pendaftaran
                         </p>
                     </a>
-                </li>
+                </li> -->
                 <li class="nav-header">DATA PENGGUNA</li>
                 <li class="nav-item">
                     <a href="<?= base_url(); ?>/puskesmas/dpengguna" class="nav-link">

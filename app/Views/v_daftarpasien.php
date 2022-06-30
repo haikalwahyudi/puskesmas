@@ -35,30 +35,30 @@
                 <div class="card-body">
                     <div class="tab-content" id="custom-tabs-one-tabContent">
                         <div class="tab-pane fade show active" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
-                            <form action="#">
-                                <div class="form-group">
-                                    <label for="">Kunjungan</label>
-                                    <input type="text" name="kunjungan" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="">Tanggan Daftar</label>
-                                    <input type="text" name="tgl" class="form-control">
-                                </div>
+                            <form method="POST" action="<?= base_url() ?>/Puskesmas/simpan_antrian">
                                 <div class="form-group">
                                     <label for="">Poli Tujuan</label>
-                                    <input type="text" name="poli" class="form-control">
+                                    <select name="kd_poli" class="form-control" required>
+                                        <?php foreach ($poli as $p) { ?>
+                                            <option value="<?= $p->kd_poli ?>"><?= $p->nm_poli ?></option>
+                                        <?php } ?>
+                                    </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="">BPJS</label>
-                                    <input type="text" name="bpjs" class="form-control">
+                                    <label for="">Tanggal Kunjungan</label>
+                                    <input type="date" name="tgl_kunjungan" value="<?= date('Y-m-d', time() + (60 * 60 * 38)) ?>" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label for="">Umum</label>
-                                    <input type="text" name="umum" class="form-control">
+                                    <label for="">Kategori</label>
+                                    <select name="kategori" class="form-control" required>
+                                        <option value="umum">umum</option>
+                                        <option value="bpjs">bpjs</option>
+                                    </select>
                                 </div>
                                 <div class="card-foote">
-                                    <button class="btn btn-success">Daftar</button>
-                                    <button class="btn btn-danger">Batal</button>
+                                    <button type="submit" class="btn btn-success">Daftar</button>
+                                    <button type="reset" class="btn btn-danger">Batal</button>
+                                    <a href="<?= base_url() ?>/Puskesmas" class="btn bg-teal float-right">Landing Page</a>
                                 </div>
                             </form>
                         </div>

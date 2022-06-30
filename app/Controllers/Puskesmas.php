@@ -7,6 +7,7 @@ use App\Models\M_poli;
 use App\Models\M_dokter;
 use App\Models\M_pasien;
 use App\Models\M_jadwal;
+use App\Models\M_pendaftaran;
 
 
 class Puskesmas extends BaseController
@@ -16,6 +17,7 @@ class Puskesmas extends BaseController
     protected $M_dokter;
     protected $M_pasien;
     protected $M_jadwal;
+    protected $M_pendaftaran;
 
     public function __construct()
     {
@@ -24,10 +26,12 @@ class Puskesmas extends BaseController
         $this->M_dokter = new M_dokter();
         $this->M_pasien = new M_pasien();
         $this->M_jadwal = new M_jadwal();
+        $this->M_pendaftaran = new M_pendaftaran();
     }
 
     public function index()
     {
+        // return view('template');
         return view('landingpage');
     }
     public function admin()
@@ -269,9 +273,50 @@ class Puskesmas extends BaseController
     // Daftar
     public function daftar()
     {
-        return view('v_daftarpasien');
+        $data = [
+            "poli" =>  $this->M_poli->ambilData(),
+        ];
+        // dd(date('Y-m-d', time() + (60 * 60 * 14)));
+        //dd(date('mdHis'));
+        return view('v_daftarpasien', $data);
     }
     // And Daftar
+
+    public function simpan_antrian()
+    {
+        $tgl = $this->request->getVar('tgl_kunjungan');
+        $poli = $this->request->getVar('kd_poli');
+        $db = \Config\Database::connect();
+        $antri = $db->query("select max(no_antrian) as max from pendaftaran where kd_poli='$poli' and tgl_kunjungan='$tgl'")->getRowArray();
+        //dd($antri['max']);
+        $no_antrian = 1;
+        if ($antri['max']) {
+            $no_antrian = $antri['max'] + 1;
+        }
+
+        $this->M_pendaftaran->simpan([
+            'no_pendaftaran'     => date('mdHis'),
+            'kd_psn'             => session()->get('kd_psn'),
+            'no_antrian'         => $no_antrian,
+            'tgl_kunjungan'      => $this->request->getVar('tgl_kunjungan'),
+            'tgl_pendaftaran'    => date('Y-m-d', time() + (60 * 60 * 14)),
+            'kd_poli'            => $this->request->getVar('kd_poli'),
+            'kategori'           => $this->request->getVar('kategori')
+        ]);
+        session()->setFlashdata('Berhasil', 'Akun berhasil dibuat');
+        return redirect()->to('/puskesmas');
+    }
+
+
+    public function antrian()
+    {
+        $data = [
+            "antrian" =>  $this->M_pendaftaran->ambilAntrian(session()->get('kd_psn')),
+        ];
+        //dd($data);
+        return view('v_antrian', $data);
+    }
+
 
     // Daftar Akun
     public function daftarAkun()
@@ -288,8 +333,15 @@ class Puskesmas extends BaseController
             'password'      => $this->request->getVar('password'),
             'level'         => 'pasien'
         ]);
+
+        $this->M_pasien->simpan([
+            'nm_psn'     => $this->request->getVar('nama'),
+            'jk'         => $this->request->getVar('jk'),
+            'email'      => $this->request->getVar('email'),
+            'nohp'       => $this->request->getVar('nohp'),
+        ]);
         session()->setFlashdata('Berhasil', 'Akun berhasil dibuat');
-        return redirect()->to('/puskesmas/daftarAkun');
+        return redirect()->to('/login');
     }
     // And Daftar Akun1
 

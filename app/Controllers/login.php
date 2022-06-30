@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\M_login;
+use App\Models\M_pasien;
 
 class Login extends BaseController
 {
@@ -13,7 +14,7 @@ class Login extends BaseController
     public function cekLogin()
     {
         $model = new M_login();
-
+        $modelpsn = new M_pasien();
         $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
 
@@ -36,10 +37,12 @@ class Login extends BaseController
                     return redirect()->to('/login');
                 }
             } else {
+                $kd = $modelpsn->cek($cek['email'])->getRowArray()['kd_psn'];
                 $data_ses = [
                     'nama'      => $cek['Nama_user'],
-                    'leve'      => $cek['level'],
-                    'log_in'    => true
+                    'level'      => $cek['level'],
+                    'log_in'    => true,
+                    'kd_psn'    => $kd
                 ];
                 if ($cek['password'] == $password) {
                     session()->set($data_ses);

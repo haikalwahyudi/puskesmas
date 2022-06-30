@@ -35,7 +35,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">
-                            <a href="<?= base_url(); ?>/puskesmas/tpasien" class="btn btn-success"><i class="fa fa-plus"></i> Tambah</a>
+                            <!-- <a href="<?= base_url(); ?>/puskesmas/tpasien" class="btn btn-success"><i class="fa fa-plus"></i> Tambah</a> -->
                         </h3>
                     </div>
                     <!-- /.card-header -->
@@ -47,10 +47,7 @@
                                     <th>Kode Pasien</th>
                                     <th>Nama Pasien</th>
                                     <th>Jenis Kelamin</th>
-                                    <th>Umur</th>
                                     <th>No Hp</th>
-                                    <th>Alamat</th>
-                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -63,13 +60,11 @@
                                         <td><?= $d->kd_psn; ?></td>
                                         <td><?= $d->nm_psn; ?></td>
                                         <td><?= $d->jk; ?></td>
-                                        <td><?= $d->usia; ?></td>
                                         <td><?= $d->nohp; ?></td>
-                                        <td><?= $d->alamat; ?></td>
-                                        <td>
+                                        <!-- <td>
                                             <a href="<?= base_url() ?>/puskesmas/hpasienAksi/<?= $d->kd_psn; ?>" class="btn btn-danger btn-sm" title="Hapus" onclick="return confirm('Yakin ingin menghapus data ini!')"><i class="fa fa-trash"></i></a>
                                             <a href="<?= base_url(); ?>/puskesmas/upasien/<?= $d->kd_psn; ?>" class="btn btn-warning btn-sm" title="Ubah"><i class="fa fa-edit"></i></a>
-                                        </td>
+                                        </td> -->
                                     </tr>
                                 <?php } ?>
                             </tbody>

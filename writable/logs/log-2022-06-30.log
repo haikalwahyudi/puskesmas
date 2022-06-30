@@ -1,0 +1,168 @@
+ERROR - 2022-06-30 03:34:21 --> Unknown column 'tgl_pendaftaran' in 'field list'
+CRITICAL - 2022-06-30 03:34:21 --> Unknown column 'tgl_pendaftaran' in 'field list'
+#0 C:\xampp\htdocs\puskesmas\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\puskesmas\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\puskesmas\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\puskesmas\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\puskesmas\app\Models\M_pendaftaran.php(23): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\puskesmas\app\Controllers\Puskesmas.php(293): App\Models\M_pendaftaran->simpan(Array)
+#6 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Puskesmas->simpan_antrian()
+#7 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#8 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2022-06-30 03:35:41 --> Duplicate entry '2147483647' for key 'PRIMARY'
+CRITICAL - 2022-06-30 03:35:41 --> Duplicate entry '2147483647' for key 'PRIMARY'
+#0 C:\xampp\htdocs\puskesmas\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\puskesmas\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\puskesmas\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\puskesmas\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\puskesmas\app\Models\M_pendaftaran.php(23): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\puskesmas\app\Controllers\Puskesmas.php(293): App\Models\M_pendaftaran->simpan(Array)
+#6 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Puskesmas->simpan_antrian()
+#7 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#8 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2022-06-30 03:37:06 --> Duplicate entry '2147483647' for key 'PRIMARY'
+CRITICAL - 2022-06-30 03:37:06 --> Duplicate entry '2147483647' for key 'PRIMARY'
+#0 C:\xampp\htdocs\puskesmas\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\puskesmas\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\puskesmas\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\puskesmas\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 C:\xampp\htdocs\puskesmas\app\Models\M_pendaftaran.php(23): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\puskesmas\app\Controllers\Puskesmas.php(293): App\Models\M_pendaftaran->simpan(Array)
+#6 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Puskesmas->simpan_antrian()
+#7 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#8 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2022-06-30 05:54:55 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'limit = 1' at line 1
+CRITICAL - 2022-06-30 05:54:55 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'limit = 1' at line 1
+#0 C:\xampp\htdocs\puskesmas\system\Database\MySQLi\Connection.php(292): mysqli->query('select * from p...', 0)
+#1 C:\xampp\htdocs\puskesmas\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('select * from p...')
+#2 C:\xampp\htdocs\puskesmas\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('select * from p...')
+#3 C:\xampp\htdocs\puskesmas\app\Controllers\Puskesmas.php(290): CodeIgniter\Database\BaseConnection->query('select * from p...')
+#4 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Puskesmas->simpan_antrian()
+#5 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#6 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+ERROR - 2022-06-30 05:56:23 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'no_antrian ASC' at line 1
+CRITICAL - 2022-06-30 05:56:23 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'no_antrian ASC' at line 1
+#0 C:\xampp\htdocs\puskesmas\system\Database\MySQLi\Connection.php(292): mysqli->query('select * from p...', 0)
+#1 C:\xampp\htdocs\puskesmas\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('select * from p...')
+#2 C:\xampp\htdocs\puskesmas\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('select * from p...')
+#3 C:\xampp\htdocs\puskesmas\app\Controllers\Puskesmas.php(290): CodeIgniter\Database\BaseConnection->query('select * from p...')
+#4 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Puskesmas->simpan_antrian()
+#5 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#6 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+ERROR - 2022-06-30 05:59:01 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'order by no_antrian ASC' at line 1
+CRITICAL - 2022-06-30 05:59:01 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'order by no_antrian ASC' at line 1
+#0 C:\xampp\htdocs\puskesmas\system\Database\MySQLi\Connection.php(292): mysqli->query('select * from p...', 0)
+#1 C:\xampp\htdocs\puskesmas\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('select * from p...')
+#2 C:\xampp\htdocs\puskesmas\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('select * from p...')
+#3 C:\xampp\htdocs\puskesmas\app\Controllers\Puskesmas.php(290): CodeIgniter\Database\BaseConnection->query('select * from p...')
+#4 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Puskesmas->simpan_antrian()
+#5 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#6 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+ERROR - 2022-06-30 05:59:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'order by no_antrian,ASC' at line 1
+CRITICAL - 2022-06-30 05:59:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'order by no_antrian,ASC' at line 1
+#0 C:\xampp\htdocs\puskesmas\system\Database\MySQLi\Connection.php(292): mysqli->query('select * from p...', 0)
+#1 C:\xampp\htdocs\puskesmas\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('select * from p...')
+#2 C:\xampp\htdocs\puskesmas\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('select * from p...')
+#3 C:\xampp\htdocs\puskesmas\app\Controllers\Puskesmas.php(290): CodeIgniter\Database\BaseConnection->query('select * from p...')
+#4 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Puskesmas->simpan_antrian()
+#5 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#6 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-06-30 07:34:15 --> Trying to get property 'kd_psn' of non-object
+#0 C:\xampp\htdocs\puskesmas\app\Controllers\login.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 24, Array)
+#1 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Login->cekLogin()
+#2 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-06-30 07:37:31 --> Unsupported operand types
+#0 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Puskesmas->simpan_antrian()
+#1 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#2 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-06-30 07:38:54 --> Unsupported operand types
+#0 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Puskesmas->simpan_antrian()
+#1 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#2 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-06-30 07:43:55 --> Undefined index: max
+#0 C:\xampp\htdocs\puskesmas\app\Controllers\Puskesmas.php(291): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 291, Array)
+#1 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Puskesmas->simpan_antrian()
+#2 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#3 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-06-30 07:45:02 --> Undefined property: stdClass::$no_antrian
+#0 C:\xampp\htdocs\puskesmas\app\Controllers\Puskesmas.php(291): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 291, Array)
+#1 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Puskesmas->simpan_antrian()
+#2 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#3 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-06-30 07:46:16 --> Call to undefined method stdClass::max()
+#0 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Puskesmas->simpan_antrian()
+#1 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#2 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-06-30 07:47:06 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::get()
+#0 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Puskesmas->simpan_antrian()
+#1 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#2 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-06-30 07:56:33 --> Unsupported operand types
+#0 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Puskesmas->simpan_antrian()
+#1 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#2 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-06-30 07:58:54 --> Unsupported operand types
+#0 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Puskesmas->simpan_antrian()
+#1 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#2 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-06-30 10:05:13 --> Undefined property: stdClass::$usia
+#0 C:\xampp\htdocs\puskesmas\app\Views\admin\v_dpasien.php(66): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 66, Array)
+#1 C:\xampp\htdocs\puskesmas\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\puskesmas\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\puskesmas\system\Common.php(1089): CodeIgniter\View\View->render('admin/v_dpasien', Array, true)
+#4 C:\xampp\htdocs\puskesmas\app\Controllers\Puskesmas.php(127): view('admin/v_dpasien', Array)
+#5 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Puskesmas->dpasien()
+#6 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#7 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}

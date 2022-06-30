@@ -35,11 +35,14 @@
                     </li>
                     <?php if (session()->get('log_in') == true) { ?>
                         <li class="nav-item mr-4">
-                            <a class="nav-link text-white" href="#">Daftar</a>
+                            <a class="nav-link text-white" href="<?= base_url(); ?>/puskesmas/daftar">Daftar</a>
+                        </li>
+                        <li class="nav-item mr-4">
+                            <a class="nav-link text-white" href="<?= base_url(); ?>/puskesmas/antrian">Antrian</a>
                         </li>
                     <?php } else { ?>
                         <li class="nav-item mr-4">
-                            <a class="nav-link text-white" href="<?= base_url(); ?>/puskesmas/daftar">Daftar</a>
+                            <a class="nav-link text-white" href="<?= base_url() ?>/login" onclick="return confirm('Untuk Daftar anda harus login dahulu');">Daftar</a>
                         </li>
                     <?php } ?>
                     <li class="nav-item mr-4">
@@ -96,11 +99,11 @@
 
                     <div class="read-more mt-4">
                         <?php if (session()->get('log_in') == true) { ?>
-                            <a href="#" class="btn-read">
+                            <a href="<?= base_url(); ?>/puskesmas/daftar" class="btn-read">
                                 DAFTAR
                             </a>
                         <?php } else { ?>
-                            <a href="<?= base_url(); ?>/puskesmas/daftar" class="btn-read">
+                            <a href="<?= base_url() ?>/login" onclick="return confirm('Untuk Daftar anda harus login dahulu');" class="btn-read">
                                 DAFTAR
                             </a>
                         <?php } ?>

@@ -26,6 +26,9 @@
     <link rel="stylesheet" href="<?= base_url() ?>/template/plugins/daterangepicker/daterangepicker.css">
     <!-- summernote -->
     <link rel="stylesheet" href="<?= base_url() ?>/template/plugins/summernote/summernote-bs4.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/template/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/template/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>/template/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -101,6 +104,12 @@
     <!-- <script src="<?= base_url() ?>/template/dist/js/demo.js"></script> -->
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <!-- <script src="<?= base_url() ?>/template/dist/js/pages/dashboard.js"></script> -->
+    <script src="<?= base_url(); ?>/template/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="<?= base_url(); ?>/template/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="<?= base_url(); ?>/template/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="<?= base_url(); ?>/template/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="<?= base_url(); ?>/template/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="<?= base_url(); ?>/template/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,17 @@
+CRITICAL - 2022-06-29 21:33:53 --> Invalid file: template.php
+#0 C:\xampp\htdocs\puskesmas\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('template.php')
+#1 C:\xampp\htdocs\puskesmas\system\Common.php(1089): CodeIgniter\View\View->render('template', Array, true)
+#2 C:\xampp\htdocs\puskesmas\app\Controllers\Puskesmas.php(31): view('template')
+#3 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Puskesmas->index()
+#4 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#5 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-06-29 22:48:19 --> Call to a member function getResultArray() on array
+#0 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(825): App\Controllers\Puskesmas->daftar()
+#1 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#2 C:\xampp\htdocs\puskesmas\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\puskesmas\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\puskesmas\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
