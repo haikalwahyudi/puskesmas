@@ -8,7 +8,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <!-- Theme style -->
+    <link rel="stylesheet" href="<?= base_url() ?>/template/dist/css/adminlte.min.css">
     <!-- My CSS -->
     <link rel="stylesheet" href="./css/style.css">
 
@@ -64,6 +65,11 @@
         <hr class="nav-divider">
 
         <div class="container py-5">
+            <?php if (session()->getFlashdata('Berhasil')) { ?>
+                <div class="alert alert-success">
+                    <?= session()->getFlashdata('Berhasil'); ?>
+                </div>
+            <?php } ?>
             <?php if (session()->get('log_in')) { ?>
                 <h2 class="text-center">Selamat datang <?= session()->get('nama'); ?></h2>
             <?php } ?>

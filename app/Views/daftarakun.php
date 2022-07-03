@@ -41,33 +41,11 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="input-group mb-3">
                         <input type="text" name="email" class="form-control" placeholder="Email" required>
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group mb-3">
-                        <label for="jk">Jenis Kelamin</label>
-                        <div class="custom-control custom-radio">
-                            <input class="custom-control-input" type="radio" id="customRadio1" name="jk" value="Laki-Laki" checked>
-                            <label for="customRadio1" class="custom-control-label">Laki - Laki</label>
-                        </div>
-                        <div class="custom-control custom-radio">
-                            <input class="custom-control-input" type="radio" id="customRadio2" name="jk" value="Perempuan">
-                            <label for="customRadio2" class="custom-control-label">Perempuan</label>
-                        </div>
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <input type="number" class="form-control" name="nohp" placeholder="No Handphone" required>
-                        <div class="input-group-append">
-                            <div class="input-group-text">
-                                <span class="fas fa-phone"></span>
                             </div>
                         </div>
                     </div>
@@ -79,6 +57,58 @@
                             </div>
                         </div>
                     </div>
+                    <div class="form-group mb-3">
+                        <label for="jk">Jenis Kelamin</label>
+                        <div class="custom-control custom-radio">
+                            <input class="custom-control-input" type="radio" id="customRadio1" name="jk" value="Laki-Laki" checked>
+                            <label for="customRadio1" class="custom-control-label">Laki - Laki</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input class="custom-control-input" type="radio" id="customRadio2" name="jk" value="Perempuan">
+                            <label for="customRadio2" class="custom-control-label">Perempuan</label>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="nik" placeholder="NIK" required>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-file"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="tempat_lahir" placeholder="Tempat Lahir" required>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-marker"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="date" class="form-control" name="tanggal_lahir" placeholder="Tanggal Lahir" required>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-calendar"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="kelurahan" placeholder="Kelurahan" required>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-location-arrow"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" name="nohp" placeholder="No Handphone" required>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-phone"></span>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="row">
                         <!-- /.col -->
                         <div class="col-6">

@@ -36,6 +36,12 @@
             <h5><i class="icon fas fa-check"></i> Pemberitahuan!</h5>
             <?= session()->getFlashdata('gagal'); ?>
           </div>
+        <?php } elseif (session()->getFlashdata('Berhasil')) { ?>
+          <div class="alert alert-success alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <h5><i class="icon fas fa-check"></i> Berhasil!</h5>
+            <?= session()->getFlashdata('Berhasil'); ?>
+          </div>
         <?php } ?>
 
         <form action="<?= base_url(); ?>/login/cekLogin" method="post">

@@ -17,6 +17,14 @@ class M_pendaftaran extends model
 	// 	}
 	// }
 
+	public function dpendaftaran()
+	{
+		$this->select('pendaftaran.* , poli.*, pasien.*');
+		$this->join('poli', 'poli.kd_poli=pendaftaran.kd_poli');
+		$this->join('pasien', 'pasien.kd_psn=pendaftaran.kd_psn');
+		return $this->get()->getResultArray();
+	}
+
 	public function ambilAntrian($id)
 	{
 		$this->select('pendaftaran.* , poli.*, pasien.*');
@@ -32,11 +40,11 @@ class M_pendaftaran extends model
 		return $simpan->insert($data);
 	}
 
-	// public function hapus($id)
-	// {
-	// 	$hapus = $this->db->table($this->table);
-	// 	return $hapus->delete(['kd_poli' => $id]);
-	// }
+	public function hapus($id)
+	{
+		$hapus = $this->db->table($this->table);
+		return $hapus->delete(['kd_psn' => $id]);
+	}
 
 	// public function ubah($data, $id)
 	// {

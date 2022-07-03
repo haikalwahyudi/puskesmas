@@ -36,7 +36,28 @@ class Puskesmas extends BaseController
     }
     public function admin()
     {
-        return view('/admin/v_beranda');
+        $jmlddokter = $this->M_dokter->ambilData();
+        $jmlpoli = $this->M_poli->ambilData();
+        $jmldpasien = $this->M_pasien->ambilData();
+
+        $dp = 0;
+        $jp = 0;
+        $datapoli = 0;
+        foreach ($jmldpasien as $jmlp) {
+            $dp++;
+        }
+        foreach ($jmlddokter as $j) {
+            $jp++;
+        }
+        foreach ($jmlpoli as $datap) {
+            $datapoli++;
+        }
+        $data = [
+            'datapoli'    => $datapoli,
+            'jp'    => $jp,
+            'dp'    => $dp
+        ];
+        return view('/admin/v_beranda', $data);
     }
     // Dokter
     public function ddokter()
@@ -286,7 +307,13 @@ class Puskesmas extends BaseController
     {
         $tgl = $this->request->getVar('tgl_kunjungan');
         $poli = $this->request->getVar('kd_poli');
+        $kd = session()->get('kd_psn');
         $db = \Config\Database::connect();
+        $ambilData = $db->query("SELECT * FROM pendaftaran WHERE kd_psn='$kd'")->getRow();
+        // dd($ambilData->kd_psn);
+        if ($ambilData) {
+            $this->M_pendaftaran->hapus($ambilData->kd_psn);
+        }
         $antri = $db->query("select max(no_antrian) as max from pendaftaran where kd_poli='$poli' and tgl_kunjungan='$tgl'")->getRowArray();
         //dd($antri['max']);
         $no_antrian = 1;
@@ -303,7 +330,7 @@ class Puskesmas extends BaseController
             'kd_poli'            => $this->request->getVar('kd_poli'),
             'kategori'           => $this->request->getVar('kategori')
         ]);
-        session()->setFlashdata('Berhasil', 'Akun berhasil dibuat');
+        session()->setFlashdata('Berhasil', 'Pendaftaran berhasil, Silahkan cetak kartu antrian anda melalu menu <strong>Antrian</strong>');
         return redirect()->to('/puskesmas');
     }
 
@@ -335,12 +362,16 @@ class Puskesmas extends BaseController
         ]);
 
         $this->M_pasien->simpan([
-            'nm_psn'     => $this->request->getVar('nama'),
-            'jk'         => $this->request->getVar('jk'),
-            'email'      => $this->request->getVar('email'),
-            'nohp'       => $this->request->getVar('nohp'),
+            'nm_psn'        => $this->request->getVar('nama'),
+            'nik'           => $this->request->getVar('nik'),
+            'tempat_lahir'  => $this->request->getVar('tempat_lahir'),
+            'tanggal_lahir' => $this->request->getVar('tanggal_lahir'),
+            'kelurahan'     => $this->request->getVar('kelurahan'),
+            'jk'            => $this->request->getVar('jk'),
+            'email'         => $this->request->getVar('email'),
+            'nohp'          => $this->request->getVar('nohp'),
         ]);
-        session()->setFlashdata('Berhasil', 'Akun berhasil dibuat');
+        session()->setFlashdata('Berhasil', 'Akun berhasil dibuat, <strong>Silahkan Login</strong>');
         return redirect()->to('/login');
     }
     // And Daftar Akun1
@@ -393,4 +424,11 @@ class Puskesmas extends BaseController
         return redirect()->to('/puskesmas/djadwal');
     }
     // And Jadwal
+    public function cetak($kd_psn)
+    {
+        $data = [
+            'data'  => $this->M_pendaftaran->ambilAntrian($kd_psn)
+        ];
+        return view('v_cetakAntrian', $data);
+    }
 }

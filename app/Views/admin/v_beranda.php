@@ -23,14 +23,14 @@
                 <!-- small box -->
                 <div class="small-box bg-info">
                     <div class="inner">
-                        <h3>150</h3>
+                        <h3><?= $datapoli; ?></h3>
 
-                        <p>Data Pendaftaran</p>
+                        <p>Data Poli</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-bag"></i>
                     </div>
-                    <a href="#" class="small-box-footer">Lihat <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href="<?= base_url(); ?>/puskesmas/dpoli" class="small-box-footer">Lihat <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -38,7 +38,7 @@
                 <!-- small box -->
                 <div class="small-box bg-success">
                     <div class="inner">
-                        <h3>53<sup style="font-size: 20px">%</sup></h3>
+                        <h3><?= $jp; ?></sup></h3>
 
                         <p>Jumlah Dokter</p>
                     </div>
@@ -53,7 +53,7 @@
                 <!-- small box -->
                 <div class="small-box bg-warning">
                     <div class="inner">
-                        <h3>44</h3>
+                        <h3><?= $dp; ?></h3>
 
                         <p>Jumlah Data Pasien</p>
                     </div>

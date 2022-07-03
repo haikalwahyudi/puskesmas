@@ -52,7 +52,12 @@
                                     <tr>
                                         <td>Kategori</td>
                                         <td>: <?= $ant['kategori'] ?></td>
-                                        <td> <a href="<?= base_url() ?>/Puskesmas" class="btn bg-teal btn-sm float-right">Landing Page</a></td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <a href="<?= base_url() ?>/Puskesmas" class="btn bg-success btn-sm">Landing Page</a>
+                                                <a href="<?= base_url() ?>/Puskesmas/cetak/<?= session()->get('kd_psn'); ?>" class="btn btn-info btn-sm"><i class="fa fa-print"></i> Cetak</a>
+                                            </div>
+                                        </td>
                                     </tr>
 
                                 </tbody>

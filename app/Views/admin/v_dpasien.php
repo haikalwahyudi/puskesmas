@@ -46,6 +46,10 @@
                                     <th>No</th>
                                     <th>Kode Pasien</th>
                                     <th>Nama Pasien</th>
+                                    <th>NIK</th>
+                                    <th>Tempat Lahir</th>
+                                    <th>Tanggal Lahir</th>
+                                    <th>Kelurahan</th>
                                     <th>Jenis Kelamin</th>
                                     <th>No Hp</th>
                                 </tr>
@@ -59,6 +63,10 @@
                                         <td><?= $no++; ?></td>
                                         <td><?= $d->kd_psn; ?></td>
                                         <td><?= $d->nm_psn; ?></td>
+                                        <td><?= $d->nik; ?></td>
+                                        <td><?= $d->tempat_lahir; ?></td>
+                                        <td><?= $d->tanggal_lahir; ?></td>
+                                        <td><?= $d->kelurahan; ?></td>
                                         <td><?= $d->jk; ?></td>
                                         <td><?= $d->nohp; ?></td>
                                         <!-- <td>

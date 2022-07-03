@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2022 at 06:01 PM
+-- Generation Time: Jul 03, 2022 at 05:06 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.4.20
 
@@ -44,8 +44,9 @@ CREATE TABLE `dokter` (
 --
 
 INSERT INTO `dokter` (`kd_dokter`, `nm_dokter`, `kd_poli`, `jk`, `no_hp`, `poto`, `hari_praktik`, `id`, `alamat`) VALUES
-(10, 'haikal', 1, 'Laki-Laki', '87', '1655723651_cab91d9f5a36b4d497a3.jpeg', 'Kamis', 2, 'lkkl'),
-(12, 'lkhklh', 2, 'Laki-Laki', '87678', '1655724030_038c66eeed4b04113483.jpg', 'Rabu', 1, 'jkhkj');
+(19, 'Haikal', 1, 'Laki-Laki', '12121', '1656140933_8d0d9a6275cec5420472.png', 'Rabu', 1, 'sdfsdf'),
+(23, 'jhhj', 2, 'Perempuan', '76867', '1656288132_517fe75582bb2981b7e9.jpg', 'Selasa', 9, 'hjghjgj'),
+(24, 'Haikal Wahyudi', 12, 'Laki-Laki', '09876543', '1656859731_4114339ed0fc25dde3a2.jpg', 'Selasa', 7, 'erwerw');
 
 -- --------------------------------------------------------
 
@@ -63,8 +64,8 @@ CREATE TABLE `jadwal_praktek` (
 --
 
 INSERT INTO `jadwal_praktek` (`id`, `jam`) VALUES
-(1, '8:30 - 15:00'),
-(2, '9:30 - 16:00');
+(7, '11.00-15.00'),
+(9, '07:20-13:00');
 
 -- --------------------------------------------------------
 
@@ -75,11 +76,26 @@ INSERT INTO `jadwal_praktek` (`id`, `jam`) VALUES
 CREATE TABLE `pasien` (
   `kd_psn` int(11) NOT NULL,
   `nm_psn` varchar(50) NOT NULL,
+  `nik` varchar(39) NOT NULL,
+  `tempat_lahir` varchar(50) NOT NULL,
+  `tanggal_lahir` date NOT NULL,
+  `kelurahan` varchar(100) NOT NULL,
   `jk` varchar(20) NOT NULL,
-  `usia` varchar(15) NOT NULL,
-  `nohp` varchar(16) NOT NULL,
-  `alamat` text NOT NULL
+  `email` varchar(50) NOT NULL,
+  `nohp` varchar(16) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pasien`
+--
+
+INSERT INTO `pasien` (`kd_psn`, `nm_psn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `kelurahan`, `jk`, `email`, `nohp`) VALUES
+(7, 'Jack', '', '', '0000-00-00', '', 'Laki-Laki', 'jack@gmail.com', '085337181996'),
+(8, 'DINA', '', '', '0000-00-00', '', 'Perempuan', 'DY@gmail.com', '081234567890'),
+(9, 'Haikal Wahyudi', '', '', '0000-00-00', '', 'Laki-Laki', 'udang@gmail.com', '123456789'),
+(10, 'Udin', '1862381', 'Penakak', '2020-06-17', 'Monjok', 'Laki-Laki', 'udin@gmail.com', '132133453'),
+(11, 'dfgdf', '43534', 'rete', '5345-03-04', 'er', 'Laki-Laki', 'admin@gmail.com', '34534'),
+(12, 'ddfgd', '234', 'sfsdf', '2022-07-27', 'sdf', 'Perempuan', 'hh@gmail.com', '23423');
 
 -- --------------------------------------------------------
 
@@ -88,13 +104,27 @@ CREATE TABLE `pasien` (
 --
 
 CREATE TABLE `pendaftaran` (
-  `No_pendaftaran` int(8) NOT NULL,
-  `Kunjungan` varchar(100) NOT NULL,
-  `Tgl_Pendafataran` varchar(100) NOT NULL,
-  `Poliklinik_tujuan` varchar(100) NOT NULL,
-  `Bpjs` varchar(100) NOT NULL,
-  `Umum` varchar(100) NOT NULL
+  `no_pendaftaran` int(11) NOT NULL,
+  `kd_psn` int(11) NOT NULL,
+  `no_antrian` int(10) NOT NULL,
+  `tgl_kunjungan` date NOT NULL,
+  `tgl_pendaftaran` date NOT NULL,
+  `kd_poli` int(10) NOT NULL,
+  `kategori` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pendaftaran`
+--
+
+INSERT INTO `pendaftaran` (`no_pendaftaran`, `kd_psn`, `no_antrian`, `tgl_kunjungan`, `tgl_pendaftaran`, `kd_poli`, `kategori`) VALUES
+(630081650, 7, 1, '2022-07-01', '2022-06-30', 1, 'umum'),
+(630100425, 7, 1, '2022-07-02', '2022-07-01', 3, 'bpjs'),
+(630101053, 7, 1, '2022-06-30', '2022-07-01', 4, 'umum'),
+(630101130, 7, 1, '2022-07-02', '2022-07-01', 1, 'umum'),
+(630102548, 8, 1, '2022-07-02', '2022-07-01', 9, 'bpjs'),
+(703012919, 7, 1, '2022-07-04', '2022-07-03', 9, 'umum'),
+(703091405, 9, 1, '2022-07-04', '2022-07-03', 11, 'bpjs');
 
 -- --------------------------------------------------------
 
@@ -112,10 +142,12 @@ CREATE TABLE `poli` (
 --
 
 INSERT INTO `poli` (`kd_poli`, `nm_poli`) VALUES
-(1, 'Gigi'),
-(2, 'Saraf'),
-(3, 'Jantung'),
-(4, 'Penyakit dalam');
+(7, 'UMUM'),
+(9, 'KIA&KB'),
+(10, 'BP DEWASA'),
+(11, 'MTBS/ANAK'),
+(12, 'GIGI & MULUT'),
+(13, 'IMUNISASI');
 
 -- --------------------------------------------------------
 
@@ -139,7 +171,13 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`Kode_user`, `Nama_user`, `email`, `Jenis_kelamin`, `No_hp`, `password`, `level`) VALUES
 (5, 'Haikal Wahyudi', 'admin@gmail.com', 'Laki-Laki', '083123435567', '1234', 'Admin'),
-(14, 'aaaa', 'aaaaa@gmail.com', 'Perempuan', '1111', '11', 'Admin');
+(14, 'aaaa', 'aa@gmail.com', 'Perempuan', '1111', '1234', 'Pasien'),
+(16, 'Jack', 'jack@gmail.com', 'Laki-Laki', '085337181996', '1234', 'pasien'),
+(17, 'DINA', 'DY@gmail.com', 'Perempuan', '081234567890', '1212', 'pasien'),
+(18, 'Haikal Wahyudi', 'udang@gmail.com', 'Laki-Laki', '123456789', '1234', 'pasien'),
+(19, 'Udin', 'udin@gmail.com', 'Laki-Laki', '132133453', '1234', 'pasien'),
+(20, 'dfgdf', 'admin@gmail.com', 'Laki-Laki', '34534', '345', 'pasien'),
+(21, 'ddfgd', 'hh@gmail.com', 'Perempuan', '23423', '24234', 'pasien');
 
 --
 -- Indexes for dumped tables
@@ -167,7 +205,7 @@ ALTER TABLE `pasien`
 -- Indexes for table `pendaftaran`
 --
 ALTER TABLE `pendaftaran`
-  ADD PRIMARY KEY (`No_pendaftaran`);
+  ADD PRIMARY KEY (`no_pendaftaran`);
 
 --
 -- Indexes for table `poli`
@@ -189,25 +227,31 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `dokter`
 --
 ALTER TABLE `dokter`
-  MODIFY `kd_dokter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `kd_dokter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `jadwal_praktek`
 --
 ALTER TABLE `jadwal_praktek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `pasien`
+--
+ALTER TABLE `pasien`
+  MODIFY `kd_psn` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `poli`
 --
 ALTER TABLE `poli`
-  MODIFY `kd_poli` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `kd_poli` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `Kode_user` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `Kode_user` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
