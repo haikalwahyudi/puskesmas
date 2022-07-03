@@ -26,6 +26,7 @@
             <div class="col-md-10">
                 <?php
                 foreach ($antrian as $ant) {
+                    // dd($ant);
                 ?>
                     <div class="card card-success card-tabs">
                         <div class="card-body">
@@ -55,7 +56,7 @@
                                         <td>
                                             <div class="btn-group">
                                                 <a href="<?= base_url() ?>/Puskesmas" class="btn bg-success btn-sm">Landing Page</a>
-                                                <a href="<?= base_url() ?>/Puskesmas/cetak/<?= session()->get('kd_psn'); ?>" class="btn btn-info btn-sm"><i class="fa fa-print"></i> Cetak</a>
+                                                <a href="<?= base_url() ?>/Puskesmas/cetak/<?= $ant['no_pendaftaran']; ?>" class="btn btn-info btn-sm"><i class="fa fa-print"></i> Cetak</a>
                                             </div>
                                         </td>
                                     </tr>

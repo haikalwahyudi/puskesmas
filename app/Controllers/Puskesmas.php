@@ -309,13 +309,13 @@ class Puskesmas extends BaseController
         $poli = $this->request->getVar('kd_poli');
         $kd = session()->get('kd_psn');
         $db = \Config\Database::connect();
-        $ambilData = $db->query("SELECT * FROM pendaftaran WHERE kd_psn='$kd'")->getRow();
+        // $ambilData = $db->query("SELECT * FROM pendaftaran WHERE kd_psn='$kd'")->getRow();
         // dd($ambilData->kd_psn);
-        if ($ambilData) {
-            $this->M_pendaftaran->hapus($ambilData->kd_psn);
-        }
+        // if ($ambilData) {
+        //     $this->M_pendaftaran->hapus($ambilData->kd_psn);
+        // }
         $antri = $db->query("select max(no_antrian) as max from pendaftaran where kd_poli='$poli' and tgl_kunjungan='$tgl'")->getRowArray();
-        //dd($antri['max']);
+        // dd($antri['max']);
         $no_antrian = 1;
         if ($antri['max']) {
             $no_antrian = $antri['max'] + 1;
@@ -424,10 +424,10 @@ class Puskesmas extends BaseController
         return redirect()->to('/puskesmas/djadwal');
     }
     // And Jadwal
-    public function cetak($kd_psn)
+    public function cetak($id)
     {
         $data = [
-            'data'  => $this->M_pendaftaran->ambilAntrian($kd_psn)
+            'data'  => $this->M_pendaftaran->cariData($id)
         ];
         return view('v_cetakAntrian', $data);
     }

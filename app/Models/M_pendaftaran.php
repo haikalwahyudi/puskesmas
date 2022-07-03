@@ -17,11 +17,12 @@ class M_pendaftaran extends model
 	// 	}
 	// }
 
-	public function dpendaftaran()
+	public function cariData($id)
 	{
 		$this->select('pendaftaran.* , poli.*, pasien.*');
 		$this->join('poli', 'poli.kd_poli=pendaftaran.kd_poli');
 		$this->join('pasien', 'pasien.kd_psn=pendaftaran.kd_psn');
+		$this->where(['pendaftaran.no_pendaftaran' => $id]);
 		return $this->get()->getResultArray();
 	}
 
