@@ -8,11 +8,11 @@ class M_login extends Model
 {
     protected $table = "user";
 
-    public function cekData($email)
+    public function cekData($nohp)
     {
         return $this->db->table($this->table)
             ->where([
-                'email' => $email
+                'No_hp' => $nohp,
             ])->get()->getRowArray();
     }
 }

@@ -19,10 +19,11 @@
 <body class="hold-transition login-page">
   <div class="login-box">
     <div class="login-logo">
-      PUSKESMAS SESELA
+      <p>PUSKESMAS SESELA</p>
+      <img src="./images/logo.png" alt="Logo">
     </div>
     <!-- /.login-logo -->
-    <div class="card">
+    <div class="card card-outline card-success">
       <div class="card-body login-card-body">
         <?php if (session()->getFlashdata('salah')) { ?>
           <div class="alert alert-warning alert-dismissible">
@@ -46,7 +47,7 @@
 
         <form action="<?= base_url(); ?>/login/cekLogin" method="post">
           <div class="input-group mb-3">
-            <input type="email" class="form-control" name="email" placeholder="Email">
+            <input type="number" class="form-control" name="nohp" placeholder="No Handphone" required>
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-envelope"></span>
@@ -54,7 +55,7 @@
             </div>
           </div>
           <div class="input-group mb-3">
-            <input type="password" class="form-control" name="password" placeholder="Password">
+            <input type="password" class="form-control" name="password" placeholder="Password" required>
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-lock"></span>
@@ -64,14 +65,14 @@
           <div class="row">
             <!-- /.col -->
             <div class="col-12">
-              <button type="submit" class="btn btn-primary btn-block">Masuk</button>
+              <button type="submit" class="btn btn-success btn-block">Masuk</button>
             </div>
             <!-- /.col -->
           </div>
         </form>
 
         <p class="mb-0"><br>
-          <a href="<?= base_url(); ?>/puskesmas/daftarAkun" class="text-center">Belum punya akun?</a>
+          <a href="<?= base_url(); ?>/puskesmas/daftarAkun" class="text-center text-success">Belum punya akun?</a>
         </p>
       </div>
       <!-- /.login-card-body -->

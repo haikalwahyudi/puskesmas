@@ -328,7 +328,8 @@ class Puskesmas extends BaseController
             'tgl_kunjungan'      => $this->request->getVar('tgl_kunjungan'),
             'tgl_pendaftaran'    => date('Y-m-d', time() + (60 * 60 * 14)),
             'kd_poli'            => $this->request->getVar('kd_poli'),
-            'kategori'           => $this->request->getVar('kategori')
+            'kategori'           => $this->request->getVar('kategori'),
+            'pembayaran'         => $this->request->getVar('pembayaran'),
         ]);
         session()->setFlashdata('Berhasil', 'Pendaftaran berhasil, Silahkan cetak kartu antrian anda melalu menu <strong>Antrian</strong>');
         return redirect()->to('/puskesmas');
@@ -340,7 +341,7 @@ class Puskesmas extends BaseController
         $data = [
             "antrian" =>  $this->M_pendaftaran->ambilAntrian(session()->get('kd_psn')),
         ];
-        //dd($data);
+        // dd($data);
         return view('v_antrian', $data);
     }
 
@@ -358,7 +359,7 @@ class Puskesmas extends BaseController
             'Jenis_kelamin' => $this->request->getVar('jk'),
             'No_hp'         => $this->request->getVar('nohp'),
             'password'      => $this->request->getVar('password'),
-            'level'         => 'pasien'
+            'level'         => 'Pasien'
         ]);
 
         $this->M_pasien->simpan([
@@ -430,5 +431,27 @@ class Puskesmas extends BaseController
             'data'  => $this->M_pendaftaran->cariData($id)
         ];
         return view('v_cetakAntrian', $data);
+    }
+    public function dpendaftar()
+    {
+        $data = [
+            'data'      => $this->M_pendaftaran->ambilData(),
+        ];
+        return view('admin/pendaftar/v_dpendaftar', $data);
+    }
+    public function cetakdaftar($id)
+    {
+        $data = [
+            'data'  => $this->M_pendaftaran->cariData($id)
+        ];
+        // dd($data);
+        return view('admin/pendaftar/v_cetakdaftar', $data);
+    }
+    public function dlaporan()
+    {
+        $data = [
+            'data'  => $this->M_pendaftaran->ambilData()
+        ];
+        return view('admin/laporan/v_dlaporan', $data);
     }
 }

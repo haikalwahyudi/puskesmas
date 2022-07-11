@@ -15,11 +15,10 @@ class Login extends BaseController
     {
         $model = new M_login();
         $modelpsn = new M_pasien();
-        $email = $this->request->getVar('email');
+        $nohp = $this->request->getVar('nohp');
         $password = $this->request->getVar('password');
 
-
-        $cek = $model->cekData($email);
+        $cek = $model->cekData($nohp);
         // dd($cek);
 
         if ($cek != null) {
@@ -37,12 +36,13 @@ class Login extends BaseController
                     return redirect()->to('/login');
                 }
             } else {
-                $kd = $modelpsn->cek($cek['email'])->getRowArray()['kd_psn'];
+                $kd = $modelpsn->cek($cek['No_hp'])->getRowArray();
+                // dd($kd);
                 $data_ses = [
                     'nama'      => $cek['Nama_user'],
                     'level'      => $cek['level'],
                     'log_in'    => true,
-                    'kd_psn'    => $kd
+                    'kd_psn'    => $kd['kd_psn']
                 ];
                 if ($cek['password'] == $password) {
                     session()->set($data_ses);
@@ -53,7 +53,7 @@ class Login extends BaseController
                 }
             }
         } else {
-            session()->setFlashdata('gagal', 'Email anda tidak valid');
+            session()->setFlashdata('gagal', 'No Handphone anda tidak valid');
             return redirect()->to('/login');
         }
     }

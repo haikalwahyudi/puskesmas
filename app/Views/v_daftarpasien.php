@@ -39,6 +39,7 @@
                                 <div class="form-group">
                                     <label for="">Poli Tujuan</label>
                                     <select name="kd_poli" class="form-control" required>
+                                        <option value="">-Pilih-</option>
                                         <?php foreach ($poli as $p) { ?>
                                             <option value="<?= $p->kd_poli ?>"><?= $p->nm_poli ?></option>
                                         <?php } ?>
@@ -50,14 +51,19 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="">Kategori</label>
-                                    <select name="kategori" class="form-control" required>
-                                        <option value="umum">umum</option>
-                                        <option value="bpjs">bpjs</option>
+                                    <select name="kategori" class="form-control kt2" onchange="tes();" id="kt" required>
+                                        <option value="">-Pilih-</option>
+                                        <option value="UMUM">UMUM</option>
+                                        <option value="BPJS">BPJS</option>
                                     </select>
+                                </div>
+                                <div class="form-group" id="pb">
+                                    <label for="">Nomor BPJS</label>
+                                    <input type="text" name="pembayaran" id="bpjs" class="form-control">
                                 </div>
                                 <div class="card-foote">
                                     <button type="submit" class="btn btn-success">Daftar</button>
-                                    <button type="reset" class="btn btn-danger">Batal</button>
+                                    <!-- <button type="reset" class="btn btn-danger">Batal</button> -->
                                     <a href="<?= base_url() ?>/Puskesmas" class="btn bg-teal float-right">Landing Page</a>
                                 </div>
                             </form>
@@ -72,9 +78,51 @@
         </div>
     </div>
     <!-- /.center -->
+    <script>
+        // const kategori = document.getElementById('kt');
+        // // const lokasi = document.getElementById('pb');
+        // // const newTextBox = document.createElement('input');
+        // // newTextBox.className = "form-control";
+        // // newTextBox.type = "text";
+        // // newTextBox.id = "bpjs";
+        // // newTextBox.placeholder = "Masukkan Nomor BPJS"
+        // let pilihan = document.getElementById('kt').value;
 
+        // kategori.addEventListener('change', function(e) {
+        //     // console.log(pilihan);
+        //     // lokasi.appendChild(newTextBox);
+        //     if (pilihan != 'UMUM') {
+        //         document.getElementById('bpjs').disabled = true;
+        //     } else {
+        //         document.getElementById('bpjs').disabled = false;
+        //     }
+        // })
+
+        function tes() {
+            //     let lokasi = document.getElementById('pb');
+            //     let newTextBox = document.createElement('input');
+            //     newTextBox.className = "form-control";
+            //     newTextBox.type = "text";
+            //     newTextBox.id = "bpjs";
+            //     newTextBox.placeholder = "Masukkan Nomor BPJS"
+            let pilihan = document.getElementById('kt').value;
+            //     // console.log(pilihan);
+            if (pilihan != 'UMUM') {
+                document.getElementById('bpjs').disabled = false;
+                document.getElementById('bpjs').required = true;
+                document.getElementById('bpjs').focus();
+                //         lokasi.appendChild(newTextBox);
+                //         // newTextBox.appendChild(newTextBox);
+            } else {
+                document.getElementById('bpjs').disabled = true;
+                document.getElementById('bpjs').value = "";
+                //         document.getElementById('bpjs').disabled = true;
+            }
+        }
+    </script>
     <!-- jQuery -->
     <script src="<?= base_url(); ?>/template/plugins/jquery/jquery.min.js"></script>
+    <!-- <script src="<?= base_url() ?>/js/textbox.js"></script> -->
     <!-- Bootstrap 4 -->
     <script src="<?= base_url(); ?>/template/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -33,14 +33,14 @@
                 <?php } ?>
                 <!-- Alert -->
                 <div class="card">
-                    <div class="card-header">
+                    <!-- <div class="card-header">
                         <h3 class="card-title">
-                            <!-- <a href="<?= base_url(); ?>/puskesmas/tpasien" class="btn btn-success"><i class="fa fa-plus"></i> Tambah</a> -->
+                            <a href="<?= base_url(); ?>/puskesmas/tpasien" class="btn btn-success"><i class="fa fa-plus"></i> Tambah</a>
                         </h3>
-                    </div>
+                    </div> -->
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <table class="table table-striped text-center responsive nowrap table-hover" width="100%">
+                        <table id="example2" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
                                     <th>No</th>

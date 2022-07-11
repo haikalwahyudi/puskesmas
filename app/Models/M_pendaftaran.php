@@ -34,6 +34,13 @@ class M_pendaftaran extends model
 		$this->where(['pendaftaran.kd_psn' => $id]);
 		return $this->get()->getResultArray();
 	}
+	public function ambilData()
+	{
+		$this->select('pendaftaran.* , poli.*, pasien.*');
+		$this->join('poli', 'poli.kd_poli=pendaftaran.kd_poli');
+		$this->join('pasien', 'pasien.kd_psn=pendaftaran.kd_psn');
+		return $this->get()->getResultArray();
+	}
 
 	public function simpan($data)
 	{

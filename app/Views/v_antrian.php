@@ -30,13 +30,17 @@
                 ?>
                     <div class="card card-success card-tabs">
                         <div class="card-body">
-                            <table class="table table-sm table-striped responsive " width="100%">
+                            <table class="table table-sm table-striped responsive" width="100%">
 
                                 <tbody>
                                     <tr>
-                                        <td width="30%">No Pendaftaran</td>
+                                        <td width="25%">No Pendaftaran</td>
                                         <td width="50%">: <?= $ant['no_pendaftaran'] ?></td>
-                                        <td width="50%"><b>No Antrian :</b> <?= $ant['no_antrian'] ?></td>
+                                        <td width="25%"><b>No Antrian :</b> <?= $ant['no_antrian'] ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nama Pasien</td>
+                                        <td>: <?= $ant['nm_psn'] ?></td>
                                     </tr>
                                     <tr>
                                         <td>Tanggal Pendaftaran</td>

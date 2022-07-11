@@ -30,36 +30,78 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-header">DATA MASTER</li>
                 <li class="nav-item">
-                    <a href="<?= base_url(); ?>/puskesmas/ddokter" class="nav-link">
-                        <i class="nav-icon fas fa-user"></i>
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-table"></i>
                         <p>
-                            Dokter
+                            Data Master
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="<?= base_url(); ?>/puskesmas/ddokter" class="nav-link">
+                                <i class="nav-icon fas fa-user"></i>
+                                <p>
+                                    Dokter
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= base_url(); ?>/puskesmas/djadwal" class="nav-link">
+                                <i class="nav-icon fas fa-file"></i>
+                                <p>
+                                    Jadwal Praktik
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= base_url(); ?>/puskesmas/dpasien" class="nav-link">
+                                <i class="nav-icon fas fa-user"></i>
+                                <p>
+                                    Pasien
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= base_url(); ?>/puskesmas/dpoli" class="nav-link">
+                                <i class="nav-icon fas fa-user"></i>
+                                <p>
+                                    Poli
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+
+                    <a href="<?= base_url(); ?>/Puskesmas/dpendaftar" class="nav-link">
+                        <i class="nav-icon fas fa-file-contract"></i>
+                        <p>
+                            Pendaftar
+                            <?php
+                            $db = \Config\Database::connect();
+
+                            $query = $db->query("SELECT * FROM poli, pasien, pendaftaran WHERE poli.kd_poli = pendaftaran.kd_poli && pasien.kd_psn = pendaftaran.kd_psn");
+
+                            $data = $query->getResultArray();
+                            // dd($d['tgl_kunjungan']);
+                            $no = 0;
+                            foreach ($data as $d) {
+                                if ($d['tgl_kunjungan'] >= date('Y-m-d', time() + (60 * 60 * 13)) && $d['tgl_kunjungan'] <= date('Y-m-d', time() + (60 * 60 * 13))) {
+                                    $no++;
+                                }
+                            }
+                            ?>
+                            <span class="badge badge-danger"><?= $no; ?></span>
                         </p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="<?= base_url(); ?>/puskesmas/djadwal" class="nav-link">
+                    <a href="<?= base_url(); ?>/Puskesmas/dlaporan" class="nav-link">
                         <i class="nav-icon fas fa-file"></i>
                         <p>
-                            Jadwal Praktik
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="<?= base_url(); ?>/puskesmas/dpasien" class="nav-link">
-                        <i class="nav-icon fas fa-user"></i>
-                        <p>
-                            Pasien
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="<?= base_url(); ?>/puskesmas/dpoli" class="nav-link">
-                        <i class="nav-icon fas fa-user"></i>
-                        <p>
-                            Poli
+                            Laporan
                         </p>
                     </a>
                 </li>
@@ -83,7 +125,7 @@
                     </a>
                 </li>
                 <li class="nav-item text-center mb-3">
-                    <a href="<?= base_url(); ?>/login/logout" class="btn btn-success">
+                    <a href="<?= base_url(); ?>/login/logout" class="btn btn-success" onclick="return confirm('Yaking ingin keluar?')">
                         <i class="nav-icon fa fa-arrow-left"></i> Logout
                     </a>
                 </li>

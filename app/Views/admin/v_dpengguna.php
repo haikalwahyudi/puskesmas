@@ -38,7 +38,7 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                        <table class="table table-striped text-center responsive nowrap table-hover" width="100%">
+                        <table id="example2" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
                                     <th>No</th>
@@ -67,8 +67,8 @@
                                         <td><?= $d['password']; ?></td>
                                         <td><?= $d['level']; ?></td>
                                         <td>
-                                            <a href="<?= base_url(); ?>/Puskesmas/hpengguna/<?= $d['Kode_user']; ?>" onclick="return confirm('Yakin ingin menghapus data')" class="btn btn-danger btn-sm">Hapus</a>
-                                            <a href="<?= base_url(); ?>/puskesmas/upengguna/<?= $d['Kode_user']; ?>" class="btn btn-warning btn-sm" onclick="tes">Ubah</a>
+                                            <a href="<?= base_url(); ?>/Puskesmas/hpengguna/<?= $d['Kode_user']; ?>" onclick="return confirm('Yakin ingin menghapus data')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                                            <a href="<?= base_url(); ?>/puskesmas/upengguna/<?= $d['Kode_user']; ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
                                         </td>
                                     </tr>
                                 <?php } ?>

@@ -17,9 +17,9 @@ class M_pasien extends model
 		}
 	}
 
-	public function cek($email)
+	public function cek($No_hp)
 	{
-		return $this->getWhere(['email' => $email]);
+		return $this->getWhere(['nohp' => $No_hp]);
 	}
 
 	public function simpan($data)
