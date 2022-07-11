@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 03, 2022 at 05:06 PM
+-- Generation Time: Jul 11, 2022 at 10:14 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.4.20
 
@@ -44,9 +44,8 @@ CREATE TABLE `dokter` (
 --
 
 INSERT INTO `dokter` (`kd_dokter`, `nm_dokter`, `kd_poli`, `jk`, `no_hp`, `poto`, `hari_praktik`, `id`, `alamat`) VALUES
-(19, 'Haikal', 1, 'Laki-Laki', '12121', '1656140933_8d0d9a6275cec5420472.png', 'Rabu', 1, 'sdfsdf'),
-(23, 'jhhj', 2, 'Perempuan', '76867', '1656288132_517fe75582bb2981b7e9.jpg', 'Selasa', 9, 'hjghjgj'),
-(24, 'Haikal Wahyudi', 12, 'Laki-Laki', '09876543', '1656859731_4114339ed0fc25dde3a2.jpg', 'Selasa', 7, 'erwerw');
+(25, 'Haikal Wahyudi, S, Kep. Ners', 14, 'Laki-Laki', '12345', '1657526548_27b7bca1b04f0c985dcb.png', 'Rabu', 21, 'Lombok Timur'),
+(26, 'Udang, S.Kep', 16, 'Perempuan', '555', '1657526590_27359363dcf69e326a18.jpg', 'Selasa', 20, 'Lombok Timur');
 
 -- --------------------------------------------------------
 
@@ -64,8 +63,9 @@ CREATE TABLE `jadwal_praktek` (
 --
 
 INSERT INTO `jadwal_praktek` (`id`, `jam`) VALUES
-(7, '11.00-15.00'),
-(9, '07:20-13:00');
+(20, '11.00-14:00'),
+(21, '07:20-14:00'),
+(22, '08:20-15.00');
 
 -- --------------------------------------------------------
 
@@ -90,12 +90,8 @@ CREATE TABLE `pasien` (
 --
 
 INSERT INTO `pasien` (`kd_psn`, `nm_psn`, `nik`, `tempat_lahir`, `tanggal_lahir`, `kelurahan`, `jk`, `email`, `nohp`) VALUES
-(7, 'Jack', '', '', '0000-00-00', '', 'Laki-Laki', 'jack@gmail.com', '085337181996'),
-(8, 'DINA', '', '', '0000-00-00', '', 'Perempuan', 'DY@gmail.com', '081234567890'),
-(9, 'Haikal Wahyudi', '', '', '0000-00-00', '', 'Laki-Laki', 'udang@gmail.com', '123456789'),
-(10, 'Udin', '1862381', 'Penakak', '2020-06-17', 'Monjok', 'Laki-Laki', 'udin@gmail.com', '132133453'),
-(11, 'dfgdf', '43534', 'rete', '5345-03-04', 'er', 'Laki-Laki', 'admin@gmail.com', '34534'),
-(12, 'ddfgd', '234', 'sfsdf', '2022-07-27', 'sdf', 'Perempuan', 'hh@gmail.com', '23423');
+(13, 'Udang', '1234', 'Penakak', '2022-07-04', 'Monjok', 'Perempuan', 'udang@gmail.com', '111'),
+(14, 'Udin', '333', 'Masbagik', '2022-06-27', 'Masbagik', 'Laki-Laki', 'udin@gmail.com', '222');
 
 -- --------------------------------------------------------
 
@@ -110,21 +106,17 @@ CREATE TABLE `pendaftaran` (
   `tgl_kunjungan` date NOT NULL,
   `tgl_pendaftaran` date NOT NULL,
   `kd_poli` int(10) NOT NULL,
-  `kategori` varchar(50) NOT NULL
+  `kategori` varchar(50) NOT NULL,
+  `pembayaran` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `pendaftaran`
 --
 
-INSERT INTO `pendaftaran` (`no_pendaftaran`, `kd_psn`, `no_antrian`, `tgl_kunjungan`, `tgl_pendaftaran`, `kd_poli`, `kategori`) VALUES
-(630081650, 7, 1, '2022-07-01', '2022-06-30', 1, 'umum'),
-(630100425, 7, 1, '2022-07-02', '2022-07-01', 3, 'bpjs'),
-(630101053, 7, 1, '2022-06-30', '2022-07-01', 4, 'umum'),
-(630101130, 7, 1, '2022-07-02', '2022-07-01', 1, 'umum'),
-(630102548, 8, 1, '2022-07-02', '2022-07-01', 9, 'bpjs'),
-(703012919, 7, 1, '2022-07-04', '2022-07-03', 9, 'umum'),
-(703091405, 9, 1, '2022-07-04', '2022-07-03', 11, 'bpjs');
+INSERT INTO `pendaftaran` (`no_pendaftaran`, `kd_psn`, `no_antrian`, `tgl_kunjungan`, `tgl_pendaftaran`, `kd_poli`, `kategori`, `pembayaran`) VALUES
+(711030526, 13, 1, '2022-07-11', '2022-07-11', 15, 'UMUM', NULL),
+(711030648, 14, 1, '2022-07-12', '2022-07-11', 14, 'BPJS', '12121');
 
 -- --------------------------------------------------------
 
@@ -142,12 +134,9 @@ CREATE TABLE `poli` (
 --
 
 INSERT INTO `poli` (`kd_poli`, `nm_poli`) VALUES
-(7, 'UMUM'),
-(9, 'KIA&KB'),
-(10, 'BP DEWASA'),
-(11, 'MTBS/ANAK'),
-(12, 'GIGI & MULUT'),
-(13, 'IMUNISASI');
+(14, 'Poli Gigi'),
+(15, 'Poli Kandungan'),
+(16, 'Poli Mata');
 
 -- --------------------------------------------------------
 
@@ -170,14 +159,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`Kode_user`, `Nama_user`, `email`, `Jenis_kelamin`, `No_hp`, `password`, `level`) VALUES
-(5, 'Haikal Wahyudi', 'admin@gmail.com', 'Laki-Laki', '083123435567', '1234', 'Admin'),
-(14, 'aaaa', 'aa@gmail.com', 'Perempuan', '1111', '1234', 'Pasien'),
-(16, 'Jack', 'jack@gmail.com', 'Laki-Laki', '085337181996', '1234', 'pasien'),
-(17, 'DINA', 'DY@gmail.com', 'Perempuan', '081234567890', '1212', 'pasien'),
-(18, 'Haikal Wahyudi', 'udang@gmail.com', 'Laki-Laki', '123456789', '1234', 'pasien'),
-(19, 'Udin', 'udin@gmail.com', 'Laki-Laki', '132133453', '1234', 'pasien'),
-(20, 'dfgdf', 'admin@gmail.com', 'Laki-Laki', '34534', '345', 'pasien'),
-(21, 'ddfgd', 'hh@gmail.com', 'Perempuan', '23423', '24234', 'pasien');
+(22, 'Haikal Wahyudi', 'udang@gmail.com', 'Laki-Laki', '1234', '1234', 'Admin'),
+(23, 'Udang', 'udang@gmail.com', 'Perempuan', '111', '1234', 'Pasien'),
+(24, 'Udin', 'udin@gmail.com', 'Laki-Laki', '222', '1234', 'Pasien');
 
 --
 -- Indexes for dumped tables
@@ -227,31 +211,31 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `dokter`
 --
 ALTER TABLE `dokter`
-  MODIFY `kd_dokter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `kd_dokter` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `jadwal_praktek`
 --
 ALTER TABLE `jadwal_praktek`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `pasien`
 --
 ALTER TABLE `pasien`
-  MODIFY `kd_psn` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `kd_psn` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `poli`
 --
 ALTER TABLE `poli`
-  MODIFY `kd_poli` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `kd_poli` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `Kode_user` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `Kode_user` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
