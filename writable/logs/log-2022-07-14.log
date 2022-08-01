@@ -1,0 +1,112 @@
+ERROR - 2022-07-14 21:20:49 --> Unknown column 'jadwal_praktek.id' in 'on clause'
+CRITICAL - 2022-07-14 21:20:49 --> Unknown column 'jadwal_praktek.id' in 'on clause'
+#0 C:\xampp\htdocs\puskesmas_SESELA\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\puskesmas_SESELA\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\puskesmas_SESELA\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\puskesmas_SESELA\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\puskesmas_SESELA\app\Models\M_dokter.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\puskesmas_SESELA\app\Controllers\Puskesmas.php(39): App\Models\M_dokter->ambilData()
+#6 C:\xampp\htdocs\puskesmas_SESELA\system\CodeIgniter.php(825): App\Controllers\Puskesmas->admin()
+#7 C:\xampp\htdocs\puskesmas_SESELA\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#8 C:\xampp\htdocs\puskesmas_SESELA\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\puskesmas_SESELA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\puskesmas_SESELA\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2022-07-14 21:29:42 --> Unknown column 'jadwal_praktek.id' in 'on clause'
+CRITICAL - 2022-07-14 21:29:42 --> Unknown column 'jadwal_praktek.id' in 'on clause'
+#0 C:\xampp\htdocs\puskesmas_SESELA\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\puskesmas_SESELA\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\puskesmas_SESELA\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\puskesmas_SESELA\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\puskesmas_SESELA\app\Models\M_dokter.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\puskesmas_SESELA\app\Controllers\Puskesmas.php(39): App\Models\M_dokter->ambilData()
+#6 C:\xampp\htdocs\puskesmas_SESELA\system\CodeIgniter.php(825): App\Controllers\Puskesmas->admin()
+#7 C:\xampp\htdocs\puskesmas_SESELA\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#8 C:\xampp\htdocs\puskesmas_SESELA\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\puskesmas_SESELA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\puskesmas_SESELA\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2022-07-14 21:30:10 --> Unknown column 'jadwal_praktek.id' in 'on clause'
+CRITICAL - 2022-07-14 21:30:10 --> Unknown column 'jadwal_praktek.id' in 'on clause'
+#0 C:\xampp\htdocs\puskesmas_SESELA\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\puskesmas_SESELA\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\puskesmas_SESELA\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\puskesmas_SESELA\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\puskesmas_SESELA\app\Models\M_dokter.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\puskesmas_SESELA\app\Controllers\Puskesmas.php(39): App\Models\M_dokter->ambilData()
+#6 C:\xampp\htdocs\puskesmas_SESELA\system\CodeIgniter.php(825): App\Controllers\Puskesmas->admin()
+#7 C:\xampp\htdocs\puskesmas_SESELA\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#8 C:\xampp\htdocs\puskesmas_SESELA\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\puskesmas_SESELA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\puskesmas_SESELA\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2022-07-14 21:33:17 --> Unknown column 'jadwal_praktek.id' in 'on clause'
+CRITICAL - 2022-07-14 21:33:17 --> Unknown column 'jadwal_praktek.id' in 'on clause'
+#0 C:\xampp\htdocs\puskesmas_SESELA\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\puskesmas_SESELA\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\puskesmas_SESELA\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\puskesmas_SESELA\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\puskesmas_SESELA\app\Models\M_dokter.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\puskesmas_SESELA\app\Controllers\Puskesmas.php(39): App\Models\M_dokter->ambilData()
+#6 C:\xampp\htdocs\puskesmas_SESELA\system\CodeIgniter.php(825): App\Controllers\Puskesmas->admin()
+#7 C:\xampp\htdocs\puskesmas_SESELA\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#8 C:\xampp\htdocs\puskesmas_SESELA\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\puskesmas_SESELA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\puskesmas_SESELA\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2022-07-14 21:33:19 --> Unknown column 'jadwal_praktek.id' in 'on clause'
+CRITICAL - 2022-07-14 21:33:19 --> Unknown column 'jadwal_praktek.id' in 'on clause'
+#0 C:\xampp\htdocs\puskesmas_SESELA\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\puskesmas_SESELA\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\puskesmas_SESELA\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\puskesmas_SESELA\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\puskesmas_SESELA\app\Models\M_dokter.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\puskesmas_SESELA\app\Controllers\Puskesmas.php(39): App\Models\M_dokter->ambilData()
+#6 C:\xampp\htdocs\puskesmas_SESELA\system\CodeIgniter.php(825): App\Controllers\Puskesmas->admin()
+#7 C:\xampp\htdocs\puskesmas_SESELA\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#8 C:\xampp\htdocs\puskesmas_SESELA\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\puskesmas_SESELA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\puskesmas_SESELA\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2022-07-14 21:36:08 --> Unknown column 'jadwal_praktek.id' in 'on clause'
+CRITICAL - 2022-07-14 21:36:08 --> Unknown column 'jadwal_praktek.id' in 'on clause'
+#0 C:\xampp\htdocs\puskesmas_SESELA\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\puskesmas_SESELA\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\puskesmas_SESELA\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\puskesmas_SESELA\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\puskesmas_SESELA\app\Models\M_dokter.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\puskesmas_SESELA\app\Controllers\Puskesmas.php(39): App\Models\M_dokter->ambilData()
+#6 C:\xampp\htdocs\puskesmas_SESELA\system\CodeIgniter.php(825): App\Controllers\Puskesmas->admin()
+#7 C:\xampp\htdocs\puskesmas_SESELA\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#8 C:\xampp\htdocs\puskesmas_SESELA\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\puskesmas_SESELA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\puskesmas_SESELA\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2022-07-14 21:36:58 --> Unknown column 'jadwal_praktek.id' in 'on clause'
+CRITICAL - 2022-07-14 21:36:58 --> Unknown column 'jadwal_praktek.id' in 'on clause'
+#0 C:\xampp\htdocs\puskesmas_SESELA\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\puskesmas_SESELA\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\puskesmas_SESELA\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\puskesmas_SESELA\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\puskesmas_SESELA\app\Models\M_dokter.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\puskesmas_SESELA\app\Controllers\Puskesmas.php(39): App\Models\M_dokter->ambilData()
+#6 C:\xampp\htdocs\puskesmas_SESELA\system\CodeIgniter.php(825): App\Controllers\Puskesmas->admin()
+#7 C:\xampp\htdocs\puskesmas_SESELA\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#8 C:\xampp\htdocs\puskesmas_SESELA\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\puskesmas_SESELA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\puskesmas_SESELA\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2022-07-14 21:44:00 --> Unknown column 'jadwal_praktek.id' in 'on clause'
+CRITICAL - 2022-07-14 21:44:00 --> Unknown column 'jadwal_praktek.id' in 'on clause'
+#0 C:\xampp\htdocs\puskesmas_SESELA\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\puskesmas_SESELA\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\puskesmas_SESELA\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\puskesmas_SESELA\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\puskesmas_SESELA\app\Models\M_dokter.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\puskesmas_SESELA\app\Controllers\Puskesmas.php(39): App\Models\M_dokter->ambilData()
+#6 C:\xampp\htdocs\puskesmas_SESELA\system\CodeIgniter.php(825): App\Controllers\Puskesmas->admin()
+#7 C:\xampp\htdocs\puskesmas_SESELA\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Puskesmas))
+#8 C:\xampp\htdocs\puskesmas_SESELA\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\puskesmas_SESELA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\puskesmas_SESELA\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}

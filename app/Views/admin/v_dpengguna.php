@@ -33,7 +33,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">
-                            <a href="<?= base_url(); ?>/puskesmas/tpengguna" class="btn btn-success"><i class="fa fa-plus"></i> Tambah</a>
+                            <!-- <a href="<?= base_url(); ?>/puskesmas/tpengguna" class="btn btn-success"><i class="fa fa-plus"></i> Tambah</a> -->
                         </h3>
                     </div>
                     <!-- /.card-header -->
@@ -49,7 +49,7 @@
                                     <th>No Hp</th>
                                     <th>Password</th>
                                     <th>Level</th>
-                                    <th>Aksi</th>
+                                    <!-- <th>Aksi</th> -->
                                 </tr>
                             </thead>
                             <tbody>
@@ -66,10 +66,10 @@
                                         <td><?= $d['No_hp']; ?></td>
                                         <td><?= $d['password']; ?></td>
                                         <td><?= $d['level']; ?></td>
-                                        <td>
+                                        <!-- <td>
                                             <a href="<?= base_url(); ?>/Puskesmas/hpengguna/<?= $d['Kode_user']; ?>" onclick="return confirm('Yakin ingin menghapus data')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                             <a href="<?= base_url(); ?>/puskesmas/upengguna/<?= $d['Kode_user']; ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
-                                        </td>
+                                        </td> -->
                                     </tr>
                                 <?php } ?>
                             </tbody>

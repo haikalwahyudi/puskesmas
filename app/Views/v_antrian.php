@@ -27,7 +27,7 @@
                 <?php
                 foreach ($antrian as $ant) {
                     // dd($ant);
-                ?>
+                    ?>
                     <div class="card card-success card-tabs">
                         <div class="card-body">
                             <table class="table table-sm table-striped responsive" width="100%">
@@ -78,12 +78,12 @@
                             <a href="<?= base_url() ?>/Puskesmas" class="btn bg-teal float-right">Landing Page</a>
                         </div>
                     </div>
-                     /.card -->
+                    /.card -->
+                </div>
+            </div>
+            <div class="col-md-1">
             </div>
         </div>
-        <div class="col-md-1">
-        </div>
-    </div>
     </div>
     <!-- /.center -->
 

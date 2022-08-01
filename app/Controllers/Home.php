@@ -8,4 +8,8 @@ class Home extends BaseController
     {
         return view('welcome_message');
     }
+    public function kontak()
+    {
+        return view('v_kontak');
+    }
 }

@@ -47,7 +47,7 @@
                         </li>
                     <?php } ?>
                     <li class="nav-item mr-4">
-                        <a class="nav-link text-white" href="#">Kontak</a>
+                        <a class="nav-link text-white" href="<?= base_url() ?>/Home/kontak">Kontak</a>
                     </li>
                     <?php if (session()->get('log_in') == 0) { ?>
                         <li class="nav-item">
@@ -96,10 +96,11 @@
                     </div>
 
                     <div class="hero-description mt-4">
-                        <p class="text-white">Puskesmas (Indonesian: Pusat Kesehatan Masyarakat,
-                            English: Community Health Centre) are government-mandated
-                            community health clinics located across Indonesia.
-                            They are overseen by the Indonesian
+                        <p class="text-white">Puskesmas SESELA: Pusat Kesehatan Masyarakat,
+						yang khusus nya di wilayah Desa Sesela,Kecamatan Gunungsari,Kabupaten Lombok Barat
+                            
+                            
+                   
                         </p>
                     </div>
 
@@ -130,7 +131,7 @@
         <div class="list-poli">
             <div class="container">
                 <div class="list-header text-center">
-                    <h3 class="list-title">Puskesmas SESELA menyediakan berbagai macam pelayanan untuk anda.</h1>
+                    <h3 class="list-title">Puskesmas SESELA menyediakan  pelayanan untuk anda.</h1>
                         <p class="list-description mt-4">Kami memiliki beberapa pelayanan yang dapat anda manfaatkan.</p>
                         <hr class="list-divider mt-4">
                 </div>
@@ -142,7 +143,7 @@
                                 <img src="./images/Poli Dalam.png" alt="Poli Dalam Icon">
                             </div>
 
-                            <h5 class="category-title mt-4">POLI DALAM</h5>
+                            <h5 class="category-title mt-4">Poli Dalam</h5>
                             <p class="category-description mt-3">
                                 Puskesmas (Indonesian: Pusat Kesehatan Masyarakat, English: Community Health Centre)
                                 are government-mandated community health clinics located across Indonesia.

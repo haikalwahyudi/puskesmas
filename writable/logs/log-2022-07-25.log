@@ -1,0 +1,26 @@
+ERROR - 2022-07-25 10:34:46 --> Error connecting to the database: Unknown database 'puskesmas_sesela'
+CRITICAL - 2022-07-25 10:34:46 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'puskesmas_sesela'
+#0 C:\xampp7\htdocs\puskesmas_SESELA\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp7\htdocs\puskesmas_SESELA\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp7\htdocs\puskesmas_SESELA\app\Models\M_login.php(16): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp7\htdocs\puskesmas_SESELA\app\Controllers\login.php(21): App\Models\M_login->cekData('1234')
+#4 C:\xampp7\htdocs\puskesmas_SESELA\system\CodeIgniter.php(825): App\Controllers\Login->cekLogin()
+#5 C:\xampp7\htdocs\puskesmas_SESELA\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#6 C:\xampp7\htdocs\puskesmas_SESELA\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp7\htdocs\puskesmas_SESELA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp7\htdocs\puskesmas_SESELA\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#9 {main}
+ERROR - 2022-07-25 10:35:28 --> Error connecting to the database: Unknown database 'puskesmas_sesela'
+CRITICAL - 2022-07-25 10:35:28 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'puskesmas_sesela'
+#0 C:\xampp7\htdocs\puskesmas_SESELA\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp7\htdocs\puskesmas_SESELA\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp7\htdocs\puskesmas_SESELA\app\Models\M_login.php(16): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp7\htdocs\puskesmas_SESELA\app\Controllers\login.php(21): App\Models\M_login->cekData('1234')
+#4 C:\xampp7\htdocs\puskesmas_SESELA\system\CodeIgniter.php(825): App\Controllers\Login->cekLogin()
+#5 C:\xampp7\htdocs\puskesmas_SESELA\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#6 C:\xampp7\htdocs\puskesmas_SESELA\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp7\htdocs\puskesmas_SESELA\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp7\htdocs\puskesmas_SESELA\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp7\\htdoc...')
+#9 {main}

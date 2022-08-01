@@ -147,6 +147,14 @@ class Puskesmas extends BaseController
         ];
         return view('admin/v_dpasien', $data);
     }
+    
+    public function cetakdpsn()
+    {
+        $data = [
+            'data'  => $this->M_pasien->ambilData()
+        ];
+        return view('admin/v_cetakpasien', $data);
+    }
     public function tpasien()
     {
         return view('admin/v_tpasien');
@@ -435,23 +443,36 @@ class Puskesmas extends BaseController
     public function dpendaftar()
     {
         $data = [
-            'data'      => $this->M_pendaftaran->ambilData(),
-        ];
-        return view('admin/pendaftar/v_dpendaftar', $data);
-    }
-    public function cetakdaftar($id)
-    {
-        $data = [
-            'data'  => $this->M_pendaftaran->cariData($id)
-        ];
+         'dpoli'     => $this->M_poli->ambilData(),
+         'data'      => $this->M_pendaftaran->ambilData(),
+     ];
+     return view('admin/pendaftar/v_dpendaftar', $data);
+ }
+ public function cetakdaftar($id)
+ {
+    $data = [
+        'data'  => $this->M_pendaftaran->cariData($id)
+    ];
         // dd($data);
-        return view('admin/pendaftar/v_cetakdaftar', $data);
-    }
-    public function dlaporan()
-    {
-        $data = [
-            'data'  => $this->M_pendaftaran->ambilData()
-        ];
-        return view('admin/laporan/v_dlaporan', $data);
-    }
+    return view('admin/pendaftar/v_cetakdaftar', $data);
+}
+public function dlaporan()
+{
+    $data = [
+        'data'  => $this->M_pendaftaran->ambilData()
+    ];
+    return view('admin/laporan/v_dlaporan', $data);
+}
+
+public function laporanBy($bl)
+{
+    $db = \Config\Database::connect();
+    $th=date('Y');
+
+    $lp=$db->query("select * from pendaftaran, poli, pasien where pendaftaran.kd_poli=poli.kd_poli and pendaftaran.kd_psn=pasien.kd_psn and month(tgl_kunjungan)='$bl' and year(tgl_kunjungan)='$th'")->getResultArray();
+    $data = [
+        'data'  => $lp
+    ];
+    return view('admin/laporan/v_dlaporan', $data);
+}
 }

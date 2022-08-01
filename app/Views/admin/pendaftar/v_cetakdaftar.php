@@ -23,7 +23,7 @@
                         </div>
                         <div class="col-md-9 pt-4">
                             <h4>Puskesmas SESELA</h4>
-                            <p>Jln ......</p>
+                            <p>Jln.Raya Sesela</p>
                         </div>
                     </div>
                 </div>

@@ -40,6 +40,7 @@
                     </div> -->
                     <!-- /.card-header -->
                     <div class="card-body">
+                        <p><a href="<?= base_url(); ?>/Puskesmas/cetakdpsn" class="btn btn-secondary" target="_blank"><i class="fa fa-print"></i> Cetak</a></p>
                         <table id="example2" class="table table-bordered table-striped">
                             <thead>
                                 <tr>

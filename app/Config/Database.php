@@ -35,7 +35,7 @@ class Database extends Config
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => 'puskesmas',
+        'database' => 'puskesmas_sesela',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,

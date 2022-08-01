@@ -26,7 +26,7 @@
                         <tr>
                             <td>
                                 <h1>Puskesmas Sesela</h1>
-                                <small>Jln.......</small>
+                                <small>Jln. Raya Sesela</small>
                                 <hr>
                             </td>
                         </tr>
